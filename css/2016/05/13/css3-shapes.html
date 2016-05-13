@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>用 CSS3 制作各种形状</title>
+  <meta name="description" content="椭圆">
+  
+  <meta name="author" content="Ash Norseman">
+  <meta name="copyright" content="&copy; Ash Norseman 2016">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/github.min.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="椭圆" />
+  <meta property="og:url" content="http://ashnorseman.github.io" />
+  <meta property="og:site_name" content="Until the Light takes us" />
+  <meta property="og:title" content="用 CSS3 制作各种形状" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://ashnorseman.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="用 CSS3 制作各种形状">
+  <meta name="twitter:description" content="椭圆">
+  <meta name="twitter:image" content="http://ashnorseman.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://ashnorseman.github.io">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://ashnorseman.github.io/css/2016/05/13/css3-shapes.html">
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <span>Until the Light takes us</span>
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">用 CSS3 制作各种形状</h1>
+      <p class="info">by <strong>Ash Norseman</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">May 13, 2016</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/css">Css</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h2 id="section">椭圆</h2>
+
+<h3 id="section-1">自适应椭圆</h3>
+
+<p><strong>用百分比定义 border-radius 的值。</strong></p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="section-2">半个椭圆</h3>
+
+<p>分别定义：</p>
+
+<ul>
+  <li>border-top-left-radius</li>
+  <li>border-top-right-radius</li>
+  <li>border-bottom-right-radius</li>
+  <li>border-bottom-left-radius</li>
+</ul>
+
+<p>或用 border-radius 的缩写：左上 右上 右下 左下。</p>
+
+<!--break-->
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="m">50%</span><span class="err">：宽；</span><span class="m">100%</span><span class="err">：高</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">50%</span> <span class="o">/</span> <span class="m">100%</span> <span class="m">50%</span> <span class="o">/</span> <span class="m">100%</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">50</span> <span class="o">/</span> <span class="m">100%</span> <span class="m">0</span> <span class="m">0</span> <span class="m">100%</span> <span class="o">/</span> <span class="m">50%</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="section-3">四分之一个椭圆</h3>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="err">有弧度的一个角占</span> <span class="m">100%</span><span class="err">，其他都是</span> <span class="m">0</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">100%</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="section-4">平行四边形</h2>
+
+<p>原理：利用 transform 对长方形进行各种变形扭曲。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">skewX</span><span class="p">(</span><span class="m">-45</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>注意：skew 变形会同时影响内部文字，需额外纠正。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">skewX</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>或者用伪元素生成平行四边形背景，字体保持不动（适用于各种只变形背景，不影响内容的情况）。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.button</span> <span class="p">{</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.button</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+        <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+        <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+        <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+        <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+        <span class="k">z-index</span><span class="o">:</span> <span class="m">-1</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">skew</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="section-5">菱形图片</h2>
+
+<p>解决方案：考虑旋转父容器。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.picture</span> <span class="p">{</span>
+    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="p">);</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">400px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.picture</span> <span class="o">&gt;</span> <span class="nt">img</span> <span class="p">{</span>
+    <span class="k">max-width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+    
+    <span class="o">//</span> <span class="err">由于旋转后的图片宽度变成了对角线，需缩放根号</span> <span class="m">2</span> <span class="err">倍</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">-45</span><span class="n">deg</span><span class="p">)</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">42</span><span class="p">);;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="section-6">切除一角</h2>
+
+<h3 id="section-7">直角</h3>
+
+<p>解决方案：利用边界分明的倾斜渐变，将除了边角部位之外的地方都铺上背景色。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">:</span>
+        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">-45</span><span class="n">deg</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>如果需要切掉多个边角，则设置多个背景渐变，并通过 background-size 控制。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">:</span>
+        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">135</span><span class="n">deg</span><span class="o">,</span>  <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">)</span> <span class="k">top</span> <span class="k">left</span><span class="o">,</span>
+        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">-135</span><span class="n">deg</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#655</span> <span class="m">0</span><span class="p">)</span> <span class="k">top</span> <span class="k">right</span><span class="o">,</span>
+        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">-45</span><span class="n">deg</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">)</span> <span class="k">bottom</span> <span class="k">right</span><span class="o">,</span>
+        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#655</span> <span class="m">0</span><span class="p">)</span> <span class="k">bottom</span> <span class="k">left</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">50%</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="section-8">圆角</h3>
+
+<p>方法同上，改为径向渐变即可。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">:</span>
+        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">at</span> <span class="k">top</span> <span class="k">left</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">)</span> <span class="k">top</span> <span class="k">left</span><span class="o">,</span>
+        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">at</span> <span class="k">top</span> <span class="k">right</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">)</span> <span class="k">top</span> <span class="k">right</span><span class="o">,</span>
+        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">at</span> <span class="k">bottom</span> <span class="k">right</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">)</span> <span class="k">bottom</span> <span class="k">right</span><span class="o">,</span>
+        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">circle</span> <span class="n">at</span> <span class="k">bottom</span> <span class="k">left</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">)</span> <span class="k">bottom</span> <span class="k">left</span><span class="p">;</span>
+    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">50%</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="tab">梯形 Tab</h2>
+
+<p>重点：用上述提到的生成伪元素背景方法，加以 3d 变形。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.tab</span> <span class="p">{</span>
+    <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">.5em</span> <span class="m">1em</span> <span class="m">.35em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.tab</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+        <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+        <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+        <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+        <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+        <span class="k">z-index</span><span class="o">:</span> <span class="m">-1</span><span class="p">;</span>
+    
+    <span class="o">//</span> <span class="m">3</span><span class="n">d</span>
+    <span class="o">//</span> <span class="n">scaleY</span> <span class="err">是为了调节近大远小</span>
+    <span class="n">transform</span><span class="o">:</span> <span class="n">scaleY</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">3</span><span class="p">)</span> <span class="n">perspective</span><span class="p">(</span><span class="m">.5em</span><span class="p">)</span> <span class="n">rotateX</span><span class="p">(</span><span class="m">5</span><span class="n">deg</span><span class="p">);</span>
+    
+    <span class="o">//</span> <span class="err">保证</span> <span class="n">tab</span> <span class="err">视觉上不位移</span>
+    <span class="n">transform</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">bottom</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>注：把 transform-origin 改为 bottom right 或 bottom left 可以生成直角梯形。</p>
+
+<h2 id="section-9">饼图</h2>
+
+<p>善用 transform。</p>
+
+<p><strong>单位 turn 表示一圈。</strong></p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.pie</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span> 
+    
+    <span class="o">//</span> <span class="err">先做成两种颜色对半开的效果</span>
+    <span class="k">background</span><span class="o">:</span> <span class="nb">yellowgreen</span><span class="p">;</span>
+    <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">to</span> <span class="k">right</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#655</span> <span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="err">生成一个用于遮罩的半圆</span>
+<span class="nc">.pie</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">0</span> <span class="m">100%</span> <span class="m">100%</span> <span class="m">0</span> <span class="o">/</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">block</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="n">transform</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="err">根据不同的百分比，用不同颜色的半圆，进行旋转后遮挡</span>
+<span class="nc">.pie.p0</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.pie.p10</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="o">.</span><span class="m">1</span><span class="n">turn</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.pie.p60</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#655</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="o">.</span><span class="m">1</span><span class="n">turn</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.pie.p100</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#655</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="o">.</span><span class="m">5</span><span class="n">turn</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+
+</article>
+
+
+
+
+
+<!--<section class="rss">-->
+  <!--<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>-->
+<!--</section>-->
+
+<!--<section class="share">-->
+  <!--<span>Share: </span>-->
+  <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  <!---->
+<!--</section>-->
+
+
+<!---->
+<!---->
+	<!--<section class="disqus">-->
+		<!--<div id="disqus_thread"></div>-->
+		<!--<script type="text/javascript">-->
+			<!--var disqus_shortname = 'ashnorseman';-->
+
+			<!--/* * * DON'T EDIT BELOW THIS LINE * * */-->
+			<!--(function() {-->
+				<!--var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;-->
+				<!--dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';-->
+				<!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+			<!--})();-->
+		<!--</script>-->
+		<!--<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>-->
+		<!--<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>-->
+	<!--</section>-->
+<!---->
+<!---->
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Until the Light takes us</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:ashnorseman@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">ashnorseman@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/ashnorseman" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">ashnorseman</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <!--<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>-->
+      <p class="text">Burn to ashes. Drift like snow.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>

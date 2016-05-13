@@ -251,9 +251,6 @@ code {
   border-radius: 3px;
   padding: 0 3px; }
 
-pre code.hljs {
-  font-size: 0.83333em; }
-
 .page-divider {
   display: block;
   width: 50%;
