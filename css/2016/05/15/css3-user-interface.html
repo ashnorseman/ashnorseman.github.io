@@ -15,7 +15,6 @@
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/github.min.css">
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
@@ -238,31 +237,6 @@
 <span class="nt">body</span><span class="nc">.dimmed</span> <span class="p">{</span>
     <span class="o">//</span> <span class="err">同时降低亮度和饱和度</span>
     <span class="n">filter</span><span class="o">:</span> <span class="n">blur</span><span class="p">(</span><span class="m">3px</span><span class="p">)</span> <span class="n">contrast</span><span class="p">(</span><span class="o">.</span><span class="m">8</span><span class="p">)</span> <span class="n">brightness</span><span class="p">(</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<h2 id="section-7">滚动提示</h2>
-
-<p>上下添加一段阴影。</p>
-
-<p>原理：新的<code>background-attachment</code>属性：</p>
-
-<ul>
-  <li>local：随着元素的内容一起滚动</li>
-  <li>scroll：随着元素一起滚动</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">ul</span> <span class="p">{</span>
-    <span class="k">overflow</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">:</span> 
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">white</span> <span class="m">30%</span><span class="o">,</span> <span class="k">transparent</span><span class="p">)</span><span class="o">,</span>
-        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">at</span> <span class="m">50%</span> <span class="m">0</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">2</span><span class="p">)</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">70%</span><span class="p">);</span>
-    <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">15px</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">白色始终停留在区域内，而阴影随着滚动消失</span>
-    <span class="k">background-attachment</span><span class="o">:</span> <span class="n">local</span><span class="o">,</span> <span class="k">scroll</span><span class="p">;</span>
-    
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">50px</span><span class="o">,</span> <span class="m">100%</span> <span class="m">15px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 
