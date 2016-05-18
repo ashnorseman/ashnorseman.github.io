@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>CSS3 背景与边框</title>
-  <meta name="description" content="边框">
+  <meta name="description" content="代码示例">
   
   <meta name="author" content="Ash Norseman">
   <meta name="copyright" content="&copy; Ash Norseman 2016">
@@ -39,7 +39,7 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="边框" />
+  <meta property="og:description" content="代码示例" />
   <meta property="og:url" content="http://ashnorseman.github.io" />
   <meta property="og:site_name" content="Until the Light takes us" />
   <meta property="og:title" content="CSS3 背景与边框" />
@@ -54,7 +54,7 @@
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CSS3 背景与边框">
-  <meta name="twitter:description" content="边框">
+  <meta name="twitter:description" content="代码示例">
   <meta name="twitter:image" content="http://ashnorseman.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://ashnorseman.github.io">
   
@@ -146,19 +146,21 @@
 </section>
 
 <article class="post-content">
-  <h2 id="section">边框</h2>
+  <p><a href="http://codepen.io/AshNorseman/pen/BKEjjd">代码示例</a></p>
+
+<h2 id="section">边框</h2>
 
 <h3 id="section-1">半透明边框</h3>
 
 <ul>
-  <li>使用 rgba() 或 hsla() 颜色</li>
-  <li>但是……会有问题……</li>
+  <li>使用 rgba 或 hsla 格式的颜色生成半透明效果</li>
+  <li>但是，会有问题……</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="err">白色背景和白色半透明边框重叠在一起！</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">solid</span> <span class="n">hsla</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">100%</span><span class="o">,</span> <span class="o">.</span><span class="m">5</span><span class="p">);</span> 
-    <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="o">//</span> <span class="err">白色背景和白色半透明边框重叠在一起！</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">dashed</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <p>解决方案：修改<code>background-clip</code>属性。</p>
@@ -169,7 +171,7 @@
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <!--break-->
@@ -182,225 +184,274 @@
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="nb">yellowgreen</span><span class="p">;</span> 
-    
-    <span class="o">//</span> <span class="m">10px</span><span class="err">、</span><span class="m">15px</span> <span class="err">均表示扩展阴影</span>
-    <span class="o">//</span> <span class="err">阴影的模糊值设为</span> <span class="m">0</span>
-    <span class="o">//</span> <span class="err">多层阴影按代码次序从上到下排列</span>
-    <span class="o">//</span> <span class="err">仍然可以设置正常阴影</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span> <span class="m">#655</span><span class="o">,</span>
-                <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">15px</span> <span class="nb">deeppink</span><span class="o">,</span>
-                <span class="m">0</span> <span class="m">2px</span> <span class="m">5px</span> <span class="m">15px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">6</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="m">10px</span><span class="err">、</span><span class="m">15px</span> <span class="err">均表示扩展阴影</span>
+  <span class="o">//</span> <span class="err">阴影的模糊值设为</span> <span class="m">0</span>
+  <span class="o">//</span> <span class="err">多层阴影按代码次序从上到下排列</span>
+  <span class="o">//</span> <span class="err">仍然可以设置正常阴影</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> 
+    <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span> <span class="n">mistyRose</span><span class="o">,</span>
+    <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">15px</span> <span class="n">fireBrick</span><span class="o">,</span>
+    <span class="m">0</span> <span class="m">2px</span> <span class="m">5px</span> <span class="m">15px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <p>注意：</p>
 
 <ul>
-  <li>box-shadow 不会占用布局空间</li>
+  <li><code>box-shadow</code>不会占用布局空间</li>
   <li>向外扩展的阴影不会相应鼠标等事件</li>
-  <li>可以设置阴影的<code>inset</code>属性，再设置额外的 padding 值</li>
+  <li>可以设置阴影的<code>inset</code>属性，再设置额外的<code>padding</code>值</li>
 </ul>
 
-<p>如果只需要两层边框，也可以用 outline 属性：</p>
-
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="nb">yellowgreen</span><span class="p">;</span> 
-    <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">solid</span> <span class="m">#655</span><span class="p">;</span> 
-    <span class="k">outline</span><span class="o">:</span> <span class="m">15px</span> <span class="k">solid</span> <span class="nb">deeppink</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> 
+    <span class="k">inset</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">5px</span> <span class="n">fireBrick</span><span class="o">,</span>
+    <span class="k">inset</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">15px</span> <span class="n">mistyRose</span><span class="o">,</span>
+    <span class="k">inset</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">5px</span> <span class="m">15px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">);</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p>PS：设置负的 outline-offset 可以把边框往里推。</p>
+<p>如果只需要两层边框，也可以用<code>outline</code>属性：</p>
+
+<p>PS：设置负的<code>outline-offset</code>可以把边框往里推。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span> 
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="k">outline</span><span class="o">:</span> <span class="m">2px</span> <span class="k">dashed</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">outline</span><span class="o">-</span><span class="n">offset</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
 
 <h3 id="border-radius">内部的 border-radius</h3>
 
-<p>综合利用 outline 和 box-shadow。</p>
+<p>综合利用<code>outline</code>和<code>box-shadow</code>，生成外边尖角，内部圆角的效果。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="nb">tan</span><span class="p">;</span> 
-    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">内部的圆角效果</span>
-    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">.8em</span><span class="p">;</span> 
-    
-    <span class="o">//</span> <span class="err">填满</span> <span class="k">outline</span> <span class="err">和</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span> <span class="err">之间的间距</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">.6em</span> <span class="m">#655</span><span class="p">;</span> 
-    
-    <span class="o">//</span> <span class="err">构建外部的尖角边框</span>
-    <span class="k">outline</span><span class="o">:</span> <span class="m">.6em</span> <span class="k">solid</span> <span class="m">#655</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span> 
+  
+  <span class="o">//</span> <span class="err">内部的圆角效果</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span> 
+  
+  <span class="o">//</span> <span class="err">填满</span> <span class="k">outline</span> <span class="err">和</span> <span class="k">border</span><span class="o">-</span><span class="n">radius</span> <span class="err">之间的间距</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0.7em</span> <span class="n">mistyRose</span><span class="p">;</span>
+  
+  <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">构建外部的尖角边框</span>
+  <span class="k">outline</span><span class="o">:</span> <span class="m">1em</span> <span class="k">solid</span> <span class="n">mistyRose</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h2 id="section-3">背景</h2>
 
 <h3 id="section-4">动态变化位置的背景图</h3>
 
-<p>CSS3 扩展了 background-position 的语法，支持背景图与四周的边距。</p>
+<p>CSS3 扩展了<code>background-position</code>的语法，支持背景图与四周的边距。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="sx">url(code-pirate.svg)</span> 
-                <span class="k">no-repeat</span> <span class="k">bottom</span> <span class="k">right</span> <span class="m">#58a</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">距离右边</span> <span class="m">20px</span><span class="err">，下边</span> <span class="m">10px</span>
-    <span class="k">background-position</span><span class="o">:</span> <span class="k">right</span> <span class="m">20px</span> <span class="k">bottom</span> <span class="m">10px</span><span class="p">;</span>    
+  <span class="k">background</span><span class="o">:</span> <span class="n">mistyRose</span> <span class="sx">url($bg)</span> <span class="k">no-repeat</span> <span class="k">bottom</span> <span class="k">right</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">距离右边</span> <span class="m">20px</span><span class="err">，下边</span> <span class="m">10px</span>
+  <span class="k">background-position</span><span class="o">:</span> <span class="k">right</span> <span class="m">20px</span> <span class="k">bottom</span> <span class="m">10px</span><span class="p">;</span> 
 <span class="p">}</span></code></pre></div>
 
-<p>默认 background-position 从 padding-box 开始计算的。也就是说，边框不会和背景图片叠加；top 和 left 等值都是从 padding-box 的外边距开始计算。</p>
+<p>默认<code>background-position</code>从<code>padding-box</code>开始计算。也就是说，边框不会和背景图片叠加；<code>top</code>和<code>left</code>等值都是从<code>padding-box</code>的外边距开始测量。</p>
 
-<p>可以通过修改 background-origin，使背景从 content-box 或 border-box 开始平铺。</p>
+<p>可以通过修改<code>background-origin</code>，使背景从<code>content-box</code>或<code>border-box</code>开始平铺。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">:</span> <span class="sx">url(&quot;code-pirate.svg&quot;)</span> 
-                <span class="k">no-repeat</span> <span class="m">#58a</span> <span class="k">bottom</span> <span class="k">right</span><span class="p">;</span>
-                
-    <span class="o">//</span> <span class="err">背景图和边框之间留下了边距，保持美观</span>
-    <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="n">mistyRose</span> <span class="sx">url($bg)</span> <span class="k">no-repeat</span> <span class="k">bottom</span> <span class="k">right</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">背景图和边框之间留下了边距，保持美观</span>
+  <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">80px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">10px</span> <span class="m">20px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p>也可以用 calc() 计算出边距。</p>
+<p>也可以用 calc() 计算出边距，但不推荐。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="sx">url(&quot;code-pirate.svg&quot;)</span> <span class="k">no-repeat</span><span class="p">;</span>
-    <span class="k">background-position</span><span class="o">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">-</span> <span class="m">20px</span><span class="p">)</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">-</span> <span class="m">10px</span><span class="p">);</span>
+  <span class="k">background-position</span><span class="o">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">-</span> <span class="m">20px</span><span class="p">)</span> <span class="n">calc</span><span class="p">(</span><span class="m">100%</span> <span class="o">-</span> <span class="m">10px</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-5">条纹背景</h3>
 
-<p>线性渐变 + background-size 可以营造出美妙的条纹效果。</p>
+<p>线性渐变 + <code>background-size</code>可以营造出美妙的条纹效果。</p>
 
 <p>在渐变中，如果两个颜色的 stop 值相等，就会产生泾渭分明的边界：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">stop</span> <span class="err">为</span> <span class="m">0</span> <span class="err">表示与上一个</span> <span class="n">stop</span> <span class="err">值相同</span>
-    <span class="o">//</span> <span class="err">调整</span> <span class="n">stop</span> <span class="err">的值，可以修改两种颜色所占的比例</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">#fb3</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">);</span>
+  <span class="o">//</span> <span class="n">stop</span> <span class="err">为</span> <span class="m">0</span> <span class="err">表示与上一个</span> <span class="n">stop</span> <span class="err">值相同</span>
+  <span class="o">//</span> <span class="err">调整</span> <span class="n">stop</span> <span class="err">的值，可以修改两种颜色所占的比例</span>
+  <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">salmon</span> <span class="m">50%</span><span class="o">,</span> <span class="n">lightSalmon</span> <span class="m">0</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
-<p>渐变产生的效果等同于 background-image，那么，就可以为渐变设置 background-size。</p>
+<p>渐变产生的效果等同于<code>background-image</code>，那么，就可以为渐变设置<code>background-size</code>。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">#fb3</span> <span class="m">33.3%</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">66.6%</span><span class="o">,</span> <span class="nb">yellowgreen</span> <span class="m">0</span><span class="p">);</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">45px</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span>
+      <span class="nb">salmon</span> <span class="m">33.3%</span><span class="o">,</span> 
+      <span class="n">lightSalmon</span> <span class="m">0</span><span class="o">,</span> <span class="n">lightSalmon</span> <span class="m">66.7%</span><span class="o">,</span> 
+      <span class="n">mistyRose</span> <span class="m">0</span>
+    <span class="p">);</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">50%</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>调整渐变的方向产生纵向条纹：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">to</span> <span class="k">right</span><span class="o">,</span> <span class="c">/* or 90deg */</span>
-                <span class="m">#fb3</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">);</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span>
+      <span class="m">90</span><span class="n">deg</span><span class="o">,</span> 
+      <span class="nb">salmon</span> <span class="m">33.3%</span><span class="o">,</span> 
+      <span class="nb">crimson</span> <span class="m">0</span><span class="o">,</span> <span class="nb">crimson</span> <span class="m">66.7%</span><span class="o">,</span> 
+      <span class="n">mistyRose</span> <span class="m">0</span>
+    <span class="p">);</span>
+  
+  <span class="o">//</span> <span class="k">size</span> <span class="err">的宽高前后次序也要调整</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">45px</span> <span class="m">100%</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>同理的对角线条纹：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="err">对角线要设置</span> <span class="m">4</span> <span class="err">个</span> <span class="n">stop</span> <span class="err">才有平铺的效果</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="o">,</span> <span class="m">#fb3</span> <span class="m">25%</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">50%</span><span class="o">,</span> <span class="m">#fb3</span> <span class="m">0</span><span class="o">,</span> <span class="m">#fb3</span> <span class="m">75%</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="p">);</span>
-    
-    <span class="o">//</span> <span class="err">要设置成方块，类似铺方砖</span>
-    <span class="o">//</span> <span class="err">如果要让条纹的粗细为</span> <span class="m">15px</span><span class="err">，</span><span class="k">size</span> <span class="err">需要</span> <span class="err">设置为</span> <span class="m">15</span> <span class="o">*</span> <span class="m">2</span> <span class="o">*</span> <span class="err">根号</span> <span class="m">2</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">42px</span> <span class="m">42px</span><span class="p">;</span>
+  <span class="o">//</span> <span class="err">对角线要设置</span> <span class="m">4</span> <span class="err">个</span> <span class="n">stop</span> <span class="err">才有平铺的效果</span>
+  <span class="k">background</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span>
+      <span class="m">45</span><span class="n">deg</span><span class="o">,</span> 
+      <span class="nb">salmon</span> <span class="m">25%</span><span class="o">,</span> 
+      <span class="n">mistyRose</span> <span class="m">0</span><span class="o">,</span> <span class="n">mistyRose</span> <span class="m">50%</span><span class="o">,</span> 
+      <span class="nb">salmon</span> <span class="m">0</span><span class="o">,</span> <span class="nb">salmon</span> <span class="m">75%</span><span class="o">,</span> 
+      <span class="n">mistyRose</span> <span class="m">0</span>
+    <span class="p">);</span>
+  
+  <span class="o">//</span> <span class="err">要设置成方块，类似铺方砖</span>
+  <span class="o">//</span> <span class="err">如果要让条纹的粗细为</span> <span class="m">15px</span><span class="err">，</span><span class="k">size</span> <span class="err">需要</span> <span class="err">设置为</span> <span class="m">15</span> <span class="o">*</span> <span class="m">2</span> <span class="o">*</span> <span class="err">根号</span> <span class="m">2</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">42px</span> <span class="m">42px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p><strong>更好的方式：利用重复渐变 repeat-linear-gradient。</strong></p>
+<p><strong>更好的方式：利用重复渐变<code>repeat-linear-gradient</code>。</strong></p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="m">15px</span><span class="err">、</span><span class="m">30px</span> <span class="err">取代了原先的</span> <span class="k">background</span><span class="o">-</span><span class="k">size</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="o">,</span> <span class="m">#fb3</span><span class="o">,</span> <span class="m">#fb3</span> <span class="m">15px</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">30px</span><span class="p">);</span>
+  <span class="o">//</span> <span class="m">15px</span><span class="err">、</span><span class="m">30px</span> <span class="err">取代了原先的</span> <span class="k">background</span><span class="o">-</span><span class="k">size</span>
+  <span class="k">background</span><span class="o">:</span> 
+    <span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span>
+      <span class="m">45</span><span class="n">deg</span><span class="o">,</span> 
+      <span class="nb">salmon</span><span class="o">,</span> <span class="nb">salmon</span> <span class="m">15px</span><span class="o">,</span> 
+      <span class="n">mistyRose</span> <span class="m">0</span><span class="o">,</span> <span class="n">mistyRose</span> <span class="m">30px</span>
+    <span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
-<p>由于 repeat-linear-gradient 设置条纹必须要有四个 stop，一般只用来设置斜向的条纹。垂直的条纹还是用 linear-gradient + background-size 的方式。</p>
+<p>由于<code>repeat-linear-gradient</code>设置条纹必须要有四个 stop，一般只用来设置斜向的条纹。垂直的条纹还是用<code>linear-gradient</code> + <code>background-size</code>的方式。</p>
 
 <p>有时候相间的条纹为同色调，这时可以用「底色 + 阴影条纹」的方式：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">透明度为</span> <span class="m">10%</span> <span class="err">的白色和纯透明组成的条纹</span>
-    <span class="k">background-image</span><span class="o">:</span> <span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">30</span><span class="n">deg</span><span class="o">,</span> <span class="n">hsla</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">100%</span><span class="o">,</span> <span class="o">.</span><span class="m">1</span><span class="p">)</span><span class="o">,</span> <span class="n">hsla</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">100%</span><span class="o">,</span> <span class="o">.</span><span class="m">1</span><span class="p">)</span> <span class="m">15px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">30px</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">透明度为</span> <span class="m">10%</span> <span class="err">的白色和纯透明组成的条纹</span>
+  <span class="k">background-image</span><span class="o">:</span> 
+    <span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span>
+      <span class="m">30</span><span class="n">deg</span><span class="o">,</span> 
+      <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">)</span> <span class="m">15px</span><span class="o">,</span> 
+      <span class="k">transparent</span> <span class="m">0</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">30px</span>
+    <span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-6">复杂的背景图案制作</h3>
 
-<p><strong>原理：background-image 可以设置多个。</strong></p>
+<p><strong>原理：<code>background-image</code>可以设置多个。</strong></p>
 
 <p>横竖条纹的叠加：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
-    <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">200</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">5</span><span class="p">)</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
-                    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">200</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">5</span><span class="p">)</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span> 
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">background-image</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">200</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">)</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">200</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">)</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span> 
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>用写死的 stop 值调整边框的粗细：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span> 
-    <span class="k">background-image</span><span class="o">:</span> 
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">white</span> <span class="m">1px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="nb">white</span> <span class="m">1px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span> 
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span> 
+  <span class="k">background-image</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">)</span> <span class="m">1px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">6</span><span class="p">)</span> <span class="m">1px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span> 
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p>结合径向渐变 radial-gradient 和 backgorund-position，可以做成密集的点状背景图：</p>
+<p>结合径向渐变<code>radial-gradient</code>和<code>background-position</code>，可以做成密集的点状背景图：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="m">#655</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">位于画布中心的圆，半径为</span> <span class="m">30%</span>
-    <span class="k">background-image</span><span class="o">:</span> 
-        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">tan</span> <span class="m">30%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
-        <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">tan</span> <span class="m">30%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span> 
-        
-    <span class="o">//</span> <span class="err">第一个圆在中心，第二个圆被移动到边角</span>
-    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span><span class="o">,</span> <span class="m">15px</span> <span class="m">15px</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">30px</span> <span class="m">30px</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">位于画布中心的圆，半径为</span> <span class="m">30%</span>
+  <span class="k">background-image</span><span class="o">:</span> 
+    <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">mistyRose</span> <span class="m">30%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">radial</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">mistyRose</span> <span class="m">30%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span> 
+  
+  <span class="o">//</span> <span class="err">第一个圆在中心，第二个圆被移动到边角</span>
+  <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span><span class="o">,</span> <span class="m">15px</span> <span class="m">15px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-7">（伪）随机背景</h3>
 
-<p>重点：background-size 的值设置成质数，不可整除，减少重复。</p>
+<p>重点：<code>background-size</code>的值设置成质数，不可整除，减少重复。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">hsl</span><span class="p">(</span><span class="m">20</span><span class="o">,</span> <span class="m">40%</span><span class="o">,</span> <span class="m">90%</span><span class="p">);</span> 
-    <span class="k">background-image</span><span class="o">:</span> 
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="m">#fb3</span> <span class="m">11px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="m">#ab4</span> <span class="m">23px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="m">#655</span> <span class="m">41px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span>
-        
-    <span class="o">//</span> <span class="err">三组条纹的</span> <span class="k">size</span> <span class="err">不同，且按规律出现的概率非常小</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">41px</span> <span class="m">100%</span><span class="o">,</span> <span class="m">61px</span> <span class="m">100%</span><span class="o">,</span> <span class="m">83px</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">background-image</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="nb">salmon</span> <span class="m">11px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="n">fireBrick</span> <span class="m">23px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span><span class="o">,</span>
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="n">mistyRose</span> <span class="m">41px</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span>
+    
+  <span class="o">//</span> <span class="err">三组条纹的</span> <span class="k">size</span> <span class="err">不同，且按规律出现的概率非常小</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">41px</span> <span class="m">100%</span><span class="o">,</span> <span class="m">61px</span> <span class="m">100%</span><span class="o">,</span> <span class="m">83px</span> <span class="m">100%</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-8">以一张完整的图片作为边框</h3>
 
-<p><strong>解决方案：同时使用背景色和背景图，设置不同的 background-clip。</strong></p>
+<p><strong>解决方案：同时使用背景色和背景图，设置不同的<code>background-clip</code>。</strong></p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">图片所占用的宽度</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1em</span> <span class="k">solid</span> <span class="k">transparent</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">用背景图的方式（渐变）设置背景色，这样就可以用</span> <span class="k">background</span><span class="o">-</span><span class="k">clip</span>
-    <span class="k">background</span><span class="o">:</span> 
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">white</span><span class="o">,</span> <span class="nb">white</span><span class="p">)</span><span class="o">,</span>
-        <span class="sx">url(stone-art.jpg)</span><span class="p">;</span> 
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="n">cover</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="o">,</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">指定背景图开始平铺的位置</span>
-    <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="o">//</span> <span class="err">用背景图的方式（渐变）设置背景色，这样就可以用</span> <span class="k">background</span><span class="o">-</span><span class="k">clip</span>
+  <span class="k">background</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">))</span><span class="o">,</span>
+    <span class="sx">url($border)</span><span class="p">;</span> 
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="n">cover</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">背景色从</span> <span class="k">padding</span> <span class="err">开始，背景图从边框开始</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="o">,</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">指定背景图开始平铺的位置</span>
+  <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  
+  <span class="o">//</span> <span class="err">图片所占用的宽度</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">1em</span> <span class="k">solid</span> <span class="k">transparent</span><span class="p">;</span>
+  
+  <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>同理，可以设置条纹边框：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">1em</span> <span class="k">solid</span> <span class="k">transparent</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">:</span> 
-        <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">white</span><span class="o">,</span> <span class="nb">white</span><span class="p">)</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="o">,</span>
-        <span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">-45</span><span class="n">deg</span><span class="o">,</span> <span class="nb">red</span> <span class="m">0</span><span class="o">,</span> <span class="nb">red</span> <span class="m">12.5%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">25%</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">0</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">37.5%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">50%</span><span class="p">)</span> <span class="m">0</span> <span class="o">/</span> <span class="m">5em</span> <span class="m">5em</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">1em</span> <span class="k">solid</span> <span class="k">transparent</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> 
+    <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">white</span><span class="o">,</span> <span class="nb">white</span><span class="p">)</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="o">,</span>
+    <span class="n">repeating</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span>
+      <span class="m">-45</span><span class="n">deg</span><span class="o">,</span> 
+      <span class="nb">red</span> <span class="m">0</span><span class="o">,</span> <span class="nb">red</span> <span class="m">12.5%</span><span class="o">,</span> 
+      <span class="k">transparent</span> <span class="m">0</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">25%</span><span class="o">,</span> 
+      <span class="m">#58a</span> <span class="m">0</span><span class="o">,</span> <span class="m">#58a</span> <span class="m">37.5%</span><span class="o">,</span> 
+      <span class="k">transparent</span> <span class="m">0</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">50%</span>
+    <span class="p">)</span> <span class="m">0</span> <span class="o">/</span> <span class="m">5em</span> <span class="m">5em</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 
