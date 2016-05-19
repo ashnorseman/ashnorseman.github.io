@@ -278,14 +278,16 @@
       <a class="post-link" href="/css/2016/05/14/css3-visual-effects.html">CSS3 视觉效果</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><h2 id="section">阴影</h2>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/rebJgm">代码示例</a></p>
+
+<h2 id="section">阴影</h2>
 
 <h3 id="section-1">单边阴影</h3>
 
-<p>重点：利用 box-shadow 的负值扩展。</p>
+<p>利用<code>box-shadow</code>的向内收缩特性。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">5px</span> <span class="m">4px</span> <span class="m">-4px</span> <span class="nb">black</span><span class="p">;</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">5px</span> <span class="m">5px</span> <span class="m">-3px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-2">相邻两侧阴影</h3>
@@ -293,7 +295,7 @@
 <p>收缩阴影的同时，加以位移。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">3px</span> <span class="m">3px</span> <span class="m">6px</span> <span class="m">-3px</span> <span class="nb">black</span><span class="p">;</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">4px</span> <span class="m">4px</span> <span class="m">5px</span> <span class="m">-2px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 </p>
@@ -328,14 +330,16 @@
       <a class="post-link" href="/css/2016/05/13/css3-shapes.html">CSS3 制作各种形状</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><h2 id="section">椭圆</h2>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/qZzEzE">代码示例</a></p>
+
+<h2 id="section">椭圆</h2>
 
 <h3 id="section-1">自适应椭圆</h3>
 
-<p><strong>用百分比定义 border-radius 的值。</strong></p>
+<p>用百分比定义<code>border-radius</code>的值。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-2">半个椭圆</h3>
@@ -343,13 +347,13 @@
 <p>分别定义：</p>
 
 <ul>
-  <li>border-top-left-radius</li>
-  <li>border-top-right-radius</li>
-  <li>border-bottom-right-radius</li>
-  <li>border-bottom-left-radius</li>
+  <li><code>border-top-left-radius</code></li>
+  <li><code>border-top-right-radius</code></li>
+  <li><code>border-bottom-right-radius</code></li>
+  <li><code>border-bottom-left-radius</code></li>
 </ul>
 
-<p>或用 border-radius 的缩写：左上 右上 右下 左下。</p>
+<p>或用<code>border-radius</code>的缩写：左上 右上 右下 左下。</p>
 
 </p>
     </section>
