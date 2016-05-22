@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>CSS3 文字</title>
-  <meta name="description" content="文字">
+  <meta name="description" content="代码示例">
   
   <meta name="author" content="Ash Norseman">
   <meta name="copyright" content="&copy; Ash Norseman 2016">
@@ -39,7 +39,7 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="文字" />
+  <meta property="og:description" content="代码示例" />
   <meta property="og:url" content="http://ashnorseman.github.io" />
   <meta property="og:site_name" content="Until the Light takes us" />
   <meta property="og:title" content="CSS3 文字" />
@@ -54,7 +54,7 @@
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CSS3 文字">
-  <meta name="twitter:description" content="文字">
+  <meta name="twitter:description" content="代码示例">
   <meta name="twitter:image" content="http://ashnorseman.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://ashnorseman.github.io">
   
@@ -146,14 +146,26 @@
 </section>
 
 <article class="post-content">
-  <h2 id="section">文字</h2>
+  <p><a href="http://codepen.io/AshNorseman/pen/ONGvRJ" target="_blank">代码示例</a></p>
+
+<h2 id="section">文字</h2>
 
 <h3 id="section-1">自动添加连字符</h3>
 
 <p>再也不需要<code>text-align: justify</code>了。</p>
 
+<p>前提是在单词可换行处添加<code>&amp;shy;</code>。</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  President Clinton&#39;s de<span class="ni">&amp;shy;</span>ci<span class="ni">&amp;shy;</span>sion on Apr.8
+  to send Chin<span class="ni">&amp;shy;</span>ese Premier Zhu Rong<span class="ni">&amp;shy;</span>ji pack<span class="ni">&amp;shy;</span>ing
+  with<span class="ni">&amp;shy;</span>out an agree<span class="ni">&amp;shy;</span>ment on China&#39;s
+  en<span class="ni">&amp;shy;</span>try into the World Trade Or<span class="ni">&amp;shy;</span>gani<span class="ni">&amp;shy;</span>za<span class="ni">&amp;shy;</span>tion
+  seemed to be a mas<span class="ni">&amp;shy;</span>sive mis<span class="ni">&amp;shy;</span>cal<span class="ni">&amp;shy;</span>cu<span class="ni">&amp;shy;</span>la<span class="ni">&amp;shy;</span>tion.
+<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
-    <span class="n">hyphens</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="n">hyphens</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-2">强行换行</h3>
@@ -161,60 +173,67 @@
 <p>使用 Unicode 提供的换行符：0x000A。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">dd</span><span class="o">:</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\A&quot;</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">防止和其他空白字符互相吞噬</span>
-    <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="p">;</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\A&quot;</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">防止和其他空白字符互相吞噬</span>
+  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <!--break-->
 
 <h3 id="section-3">背景条纹</h3>
 
-<p>重点：线性渐变背景平铺。</p>
+<p>重点：线性渐变背景平铺，但需要预留出上下<code>padding</code>。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">.5em</span><span class="p">;</span>
-    <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">:</span> <span class="nb">beige</span><span class="p">;</span>
-    <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">2</span><span class="p">)</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span>
-    
-    <span class="o">//</span> <span class="err">由于有两种背景色，高度需是行高的</span> <span class="m">2</span> <span class="err">倍</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="k">auto</span> <span class="m">3em</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">切除</span> <span class="k">padding</span> <span class="err">的影响</span>
-    <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="k">background-image</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">15</span><span class="p">)</span> <span class="m">50%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">);</span>
+
+  <span class="o">//</span> <span class="err">由于有两种背景色，高度需是行高的</span> <span class="m">2</span> <span class="err">倍</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="k">auto</span> <span class="m">3em</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">切除</span> <span class="k">padding</span> <span class="err">的影响</span>
+  <span class="k">background</span><span class="o">-</span><span class="n">origin</span><span class="o">:</span> <span class="k">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+
+  <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">0.5em</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<h3 id="tab-">改变 tab 的大小</h3>
+<h3 id="tab">改变<code>tab</code>缩进的大小</h3>
 
 <p>对代码演示网站非常有用。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">pre</span> <span class="p">{</span>
-    <span class="n">tab</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">2</span><span class="p">;</span>
+  <span class="n">tab</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">2</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-4">为指定的字符定义特殊字体</h3>
 
-<p>重点：@font-face + unicode-range</p>
+<p>重点：<code>@font-face</code> + <code>unicode-range</code>。</p>
 
-<p><code>unicode-range</code>允许的值格式：U+26, U+4??, U+2665-2670。</p>
+<ul>
+  <li><code>@font-face</code>的<code>src</code>属性允许指定本地字体。</li>
+  <li><code>unicode-range</code>指定此字体适用的文字范围。允许的值格式例子：U+26, U+4??, U+2665-2670。</li>
+</ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@font-face</span> <span class="p">{</span>
-    <span class="nt">font-family</span><span class="o">:</span> <span class="nt">Ampersand</span><span class="o">;</span>
-    
-    <span class="o">//</span> <span class="err">无需下载网络字体</span>
-    <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Baskerville-Italic&#39;</span><span class="o">),</span>
-         <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;GoudyOldStyleT-Italic&#39;</span><span class="o">),</span>
-         <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Palatino-Italic&#39;</span><span class="o">),</span>
-         <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;BookAntiqua-Italic&#39;</span><span class="o">);</span>
-         
-    <span class="o">//</span> <span class="o">&amp;</span> <span class="err">字符</span>
-    <span class="nt">unicode-range</span><span class="o">:</span> <span class="nt">U</span><span class="o">+</span><span class="nt">26</span><span class="o">;</span>
+  <span class="nt">font-family</span><span class="o">:</span> <span class="nt">Ampersand</span><span class="o">;</span>
+
+  <span class="o">//</span> <span class="err">无需下载网络字体</span>
+  <span class="nt">src</span><span class="o">:</span>
+    <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Baskerville-Italic&#39;</span><span class="o">),</span>
+    <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;GoudyOldStyleT-Italic&#39;</span><span class="o">),</span>
+    <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Palatino-Italic&#39;</span><span class="o">),</span>
+    <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;BookAntiqua-Italic&#39;</span><span class="o">);</span>
+
+  <span class="o">//</span> <span class="o">&amp;</span> <span class="err">字符</span>
+  <span class="nt">unicode-range</span><span class="o">:</span> <span class="nt">U</span><span class="o">+</span><span class="nt">26</span><span class="o">;</span>
 <span class="p">}</span>
 
 <span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">font-family</span><span class="o">:</span> <span class="n">Ampersand</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+  <span class="k">font-family</span><span class="o">:</span> <span class="n">Ampersand</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-5">自定义下划线</h3>
@@ -224,22 +243,25 @@
 <p>线性渐变可以完美解决这个问题。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">gray</span><span class="o">,</span> <span class="nb">gray</span><span class="p">)</span> <span class="k">no-repeat</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">1px</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">从下方开始计算</span>
-    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">1.15em</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">划线经过</span> <span class="n">g</span> <span class="n">p</span> <span class="n">y</span> <span class="err">等字母的时候，可以留下一点缝隙</span>
-    <span class="k">text-shadow</span><span class="o">:</span> <span class="m">.05em</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span> <span class="m">-.05em</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="o">//</span> <span class="err">用同色的线性渐变制作图片</span>
+  <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="nb">salmon</span><span class="o">,</span> <span class="nb">salmon</span><span class="p">)</span> <span class="k">no-repeat</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">粗细为</span> <span class="m">1px</span> <span class="err">的下划线</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">100%</span> <span class="m">1px</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">从下方开始计算</span>
+  <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">1.15em</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">划线经过</span> <span class="n">g</span> <span class="n">p</span> <span class="n">y</span> <span class="err">等字母的时候，可以留下一点缝隙</span>
+  <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0.05em</span> <span class="m">0</span> <span class="nb">white</span><span class="o">,</span> <span class="m">-0.05em</span> <span class="m">0</span> <span class="nb">white</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>也可获得虚线效果：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="nb">gray</span> <span class="m">66%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span> <span class="k">repeat-x</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">.2em</span> <span class="m">2px</span><span class="p">;</span>
-    <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">1em</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="m">90</span><span class="n">deg</span><span class="o">,</span> <span class="nb">salmon</span> <span class="m">66%</span><span class="o">,</span> <span class="k">transparent</span> <span class="m">0</span><span class="p">)</span> <span class="k">repeat-x</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">0.3em</span> <span class="m">2px</span><span class="p">;</span>
+  <span class="k">background-position</span><span class="o">:</span> <span class="m">0</span> <span class="m">1.15em</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-6">写实风格</h3>
@@ -247,15 +269,15 @@
 <p>浮雕效果：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">hsl</span><span class="p">(</span><span class="m">210</span><span class="o">,</span> <span class="m">13%</span><span class="o">,</span> <span class="m">60%</span><span class="p">);</span>
-    <span class="k">color</span><span class="o">:</span> <span class="n">hsl</span><span class="p">(</span><span class="m">210</span><span class="o">,</span> <span class="m">13%</span><span class="o">,</span> <span class="m">30%</span><span class="p">);</span>
-    <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">.03em</span> <span class="m">.03em</span> <span class="n">hsla</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0%</span><span class="o">,</span><span class="m">100%</span><span class="o">,.</span><span class="m">8</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
+  <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0.03em</span> <span class="m">0</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <p>阴影效果：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-    <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">-1px</span> <span class="m">1px</span> <span class="nb">black</span><span class="p">;</span>
+  <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">-1px</span> <span class="m">0</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <p>描边效果：四个 shadow 往四角方向叠加。</p>
@@ -263,18 +285,23 @@
 <p>注意：不能太粗，不然边缘处叠不上。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">span</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="nb">deeppink</span><span class="p">;</span>
-    <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
-    <span class="k">text-shadow</span><span class="o">:</span> <span class="m">1px</span> <span class="m">1px</span> <span class="nb">black</span><span class="o">,</span> <span class="m">-1px</span> <span class="m">-1px</span> <span class="nb">black</span><span class="o">,</span>
-                 <span class="m">1px</span> <span class="m">-1px</span> <span class="nb">black</span><span class="o">,</span> <span class="m">-1px</span> <span class="m">1px</span> <span class="nb">black</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">letter-spacing</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
+  <span class="k">text-shadow</span><span class="o">:</span>
+    <span class="m">1px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="m">-1px</span> <span class="m">-1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span>
+    <span class="m">1px</span> <span class="m">-1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">)</span><span class="o">,</span> <span class="m">-1px</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-7">发光字</h3>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">span</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="m">#203</span><span class="p">;</span>
-    <span class="k">color</span><span class="o">:</span> <span class="m">#ffc</span><span class="p">;</span>
-    <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">.1em</span><span class="o">,</span> <span class="m">0</span> <span class="m">0</span> <span class="m">.3em</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">0.25em</span> <span class="m">0.5em</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">默认</span> <span class="n">currentColor</span>
+  <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0.1em</span><span class="o">,</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0.3em</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-8">浮雕字</h3>
@@ -282,16 +309,17 @@
 <p>连用 N 个浮雕阴影。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">span</span> <span class="p">{</span>
-    <span class="k">background</span><span class="o">:</span> <span class="m">#58a</span><span class="p">;</span>
-    <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
-    <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">1px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0%</span><span class="o">,</span><span class="m">85%</span><span class="p">)</span><span class="o">,</span>
-                 <span class="m">0</span> <span class="m">2px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0%</span><span class="o">,</span><span class="m">80%</span><span class="p">)</span><span class="o">,</span>
-                 <span class="m">0</span> <span class="m">3px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0%</span><span class="o">,</span><span class="m">75%</span><span class="p">)</span><span class="o">,</span>
-                 <span class="m">0</span> <span class="m">4px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0%</span><span class="o">,</span><span class="m">70%</span><span class="p">)</span><span class="o">,</span>
-                 <span class="m">0</span> <span class="m">5px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0%</span><span class="o">,</span><span class="m">65%</span><span class="p">)</span><span class="o">,</span>
-                 
-                 <span class="o">//</span> <span class="err">真正的阴影</span>
-                 <span class="m">0</span> <span class="m">5px</span> <span class="m">10px</span> <span class="nb">black</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">text-shadow</span><span class="o">:</span>
+    <span class="m">0</span> <span class="m">1px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">85%</span><span class="p">)</span><span class="o">,</span>
+    <span class="m">0</span> <span class="m">2px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">80%</span><span class="p">)</span><span class="o">,</span>
+    <span class="m">0</span> <span class="m">3px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">75%</span><span class="p">)</span><span class="o">,</span>
+    <span class="m">0</span> <span class="m">4px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">70%</span><span class="p">)</span><span class="o">,</span>
+    <span class="m">0</span> <span class="m">5px</span> <span class="n">hsl</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0%</span><span class="o">,</span> <span class="m">65%</span><span class="p">)</span><span class="o">,</span>
+
+    <span class="o">//</span> <span class="err">真正的阴影</span>
+    <span class="m">0</span> <span class="m">5px</span> <span class="m">10px</span> <span class="nb">black</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 

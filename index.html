@@ -127,22 +127,24 @@
       <a class="post-link" href="/css/2016/05/15/css3-layout.html">CSS3 布局</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><h2 id="section">自适应宽度</h2>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/dMLgRV" target="_blank">代码示例</a></p>
 
-<p>使用新的 CSS 关键字：min-content。即子元素中最大的一个不可分割元素的大小。</p>
+<h2 id="section">自适应宽度</h2>
+
+<p>使用新的 CSS 关键字：<code>min-content</code>。即子元素中最大的一个不可分割元素的大小。</p>
 
 <ul>
-  <li>max-content 类似于将元素设为<code>display-inline</code>得到的宽度</li>
-  <li>fit-content 类似于将元素设为浮动得到的的宽度</li>
+  <li><code>max-content</code>类似于将元素设为<code>display-inline</code>得到的宽度</li>
+  <li><code>fit-content</code>类似于将元素设为浮动得到的的宽度</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">figure</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="n">min</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="n">min</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">figure</span> <span class="o">&gt;</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">max-width</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+  <span class="k">max-width</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 </p>
@@ -177,20 +179,26 @@
       <a class="post-link" href="/css/2016/05/15/css3-user-interface.html">CSS3 与用户体验</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><h2 id="section">鼠标</h2>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/zqXJdQ" target="_blank">代码示例</a></p>
+
+<h2 id="section">鼠标</h2>
 
 <h3 id="section-1">禁用元素</h3>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:disabled</span><span class="o">,</span> 
-<span class="o">[</span><span class="nt">disabled</span><span class="o">],</span> 
+<p><code>disabled</code>元素应当在鼠标样式上有所体现。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:disabled</span><span class="o">,</span>
+<span class="o">[</span><span class="nt">disabled</span><span class="o">],</span>
 <span class="o">[</span><span class="nt">aria-disabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="o">]</span> <span class="p">{</span>
-    <span class="k">cursor</span><span class="o">:</span> <span class="n">not</span><span class="o">-</span><span class="n">allowed</span><span class="p">;</span>
+  <span class="k">cursor</span><span class="o">:</span> <span class="n">not</span><span class="o">-</span><span class="n">allowed</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-2">隐藏鼠标</h3>
 
+<p>必要时可设置鼠标为<code>none</code>隐藏。</p>
+
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">video</span> <span class="p">{</span>
-    <span class="k">cursor</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">cursor</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 </p>
@@ -225,14 +233,26 @@
       <a class="post-link" href="/css/2016/05/15/css3-text.html">CSS3 文字</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><h2 id="section">文字</h2>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/ONGvRJ" target="_blank">代码示例</a></p>
+
+<h2 id="section">文字</h2>
 
 <h3 id="section-1">自动添加连字符</h3>
 
 <p>再也不需要<code>text-align: justify</code>了。</p>
 
+<p>前提是在单词可换行处添加<code>&amp;shy;</code>。</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  President Clinton&#39;s de<span class="ni">&amp;shy;</span>ci<span class="ni">&amp;shy;</span>sion on Apr.8
+  to send Chin<span class="ni">&amp;shy;</span>ese Premier Zhu Rong<span class="ni">&amp;shy;</span>ji pack<span class="ni">&amp;shy;</span>ing
+  with<span class="ni">&amp;shy;</span>out an agree<span class="ni">&amp;shy;</span>ment on China&#39;s
+  en<span class="ni">&amp;shy;</span>try into the World Trade Or<span class="ni">&amp;shy;</span>gani<span class="ni">&amp;shy;</span>za<span class="ni">&amp;shy;</span>tion
+  seemed to be a mas<span class="ni">&amp;shy;</span>sive mis<span class="ni">&amp;shy;</span>cal<span class="ni">&amp;shy;</span>cu<span class="ni">&amp;shy;</span>la<span class="ni">&amp;shy;</span>tion.
+<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
-    <span class="n">hyphens</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="n">hyphens</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-2">强行换行</h3>
@@ -240,10 +260,10 @@
 <p>使用 Unicode 提供的换行符：0x000A。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">dd</span><span class="o">:</span><span class="nd">:after</span> <span class="p">{</span>
-    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\A&quot;</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">防止和其他空白字符互相吞噬</span>
-    <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="p">;</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\A&quot;</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">防止和其他空白字符互相吞噬</span>
+  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 </p>
@@ -278,7 +298,7 @@
       <a class="post-link" href="/css/2016/05/14/css3-visual-effects.html">CSS3 视觉效果</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><p><a href="http://codepen.io/AshNorseman/pen/rebJgm">代码示例</a></p>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/rebJgm" target="_blank">代码示例</a></p>
 
 <h2 id="section">阴影</h2>
 
@@ -330,7 +350,7 @@
       <a class="post-link" href="/css/2016/05/13/css3-shapes.html">CSS3 制作各种形状</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p><p><a href="http://codepen.io/AshNorseman/pen/qZzEzE">代码示例</a></p>
+      <p><p><a href="http://codepen.io/AshNorseman/pen/qZzEzE" target="_blank">代码示例</a></p>
 
 <h2 id="section">椭圆</h2>
 

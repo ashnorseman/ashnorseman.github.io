@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>CSS3 布局</title>
-  <meta name="description" content="自适应宽度">
+  <meta name="description" content="代码示例">
   
   <meta name="author" content="Ash Norseman">
   <meta name="copyright" content="&copy; Ash Norseman 2016">
@@ -39,7 +39,7 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="自适应宽度" />
+  <meta property="og:description" content="代码示例" />
   <meta property="og:url" content="http://ashnorseman.github.io" />
   <meta property="og:site_name" content="Until the Light takes us" />
   <meta property="og:title" content="CSS3 布局" />
@@ -54,7 +54,7 @@
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CSS3 布局">
-  <meta name="twitter:description" content="自适应宽度">
+  <meta name="twitter:description" content="代码示例">
   <meta name="twitter:image" content="http://ashnorseman.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://ashnorseman.github.io">
   
@@ -146,35 +146,37 @@
 </section>
 
 <article class="post-content">
-  <h2 id="section">自适应宽度</h2>
+  <p><a href="http://codepen.io/AshNorseman/pen/dMLgRV" target="_blank">代码示例</a></p>
 
-<p>使用新的 CSS 关键字：min-content。即子元素中最大的一个不可分割元素的大小。</p>
+<h2 id="section">自适应宽度</h2>
+
+<p>使用新的 CSS 关键字：<code>min-content</code>。即子元素中最大的一个不可分割元素的大小。</p>
 
 <ul>
-  <li>max-content 类似于将元素设为<code>display-inline</code>得到的宽度</li>
-  <li>fit-content 类似于将元素设为浮动得到的的宽度</li>
+  <li><code>max-content</code>类似于将元素设为<code>display-inline</code>得到的宽度</li>
+  <li><code>fit-content</code>类似于将元素设为浮动得到的的宽度</li>
 </ul>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">figure</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="n">min</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="n">min</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">figure</span> <span class="o">&gt;</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">max-width</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+  <span class="k">max-width</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <!--break-->
 
 <h2 id="section-1">固定表格宽度</h2>
 
-<p>解决方案：<code>table-layout: fixed</code>。同时，表格中的<code>text-overflow: ellipsis</code> 也会起作用。</p>
+<p>解决方案：<code>table-layout: fixed</code>。同时，表格中的<code>text-overflow: ellipsis</code>也会起作用。</p>
 
 <p>这时，仍然可以为单元格设置各自的宽度。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">table</span> <span class="p">{</span>
-    <span class="k">table-layout</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="k">table-layout</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h2 id="section-2">根据子元素的数量设置样式</h2>
@@ -197,7 +199,7 @@
 
 <span class="o">//</span> <span class="err">加上其后的元素</span>
 <span class="nt">li</span><span class="nd">:first-child:nth-last-child</span><span class="o">(</span><span class="nt">4</span><span class="o">)</span> <span class="o">~</span> <span class="nt">li</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="err">共有</span> <span class="m">4</span> <span class="err">个子元素的</span> <span class="n">ul</span> <span class="err">下的全部</span> <span class="n">li</span>
+  <span class="o">//</span> <span class="err">共有</span> <span class="m">4</span> <span class="err">个子元素的</span> <span class="n">ul</span> <span class="err">下的全部</span> <span class="n">li</span>
 <span class="p">}</span></code></pre></div>
 
 <p><code>:nth-child(n+4)</code>表示第 4 个元素及之后的元素。于是，如果需要设置子元素数量在某个区间内的样式，就可以这样写：</p>
@@ -208,7 +210,7 @@
 
 <span class="o">//</span> <span class="err">加上其后的元素</span>
 <span class="nt">li</span><span class="nd">:first-child:nth-last-child</span><span class="o">(</span><span class="nt">n</span><span class="o">+</span><span class="nt">4</span><span class="o">)</span> <span class="o">~</span> <span class="nt">li</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="err">至少有</span> <span class="m">4</span> <span class="err">个子元素</span> <span class="err">的</span> <span class="n">ul</span> <span class="err">下的全部</span> <span class="n">li</span>
+  <span class="o">//</span> <span class="err">至少有</span> <span class="m">4</span> <span class="err">个子元素</span> <span class="err">的</span> <span class="n">ul</span> <span class="err">下的全部</span> <span class="n">li</span>
 <span class="p">}</span></code></pre></div>
 
 <p><code>:nth-child(-n+4)</code>表示前 4 个元素，于是，可以这样设置数量区间：</p>
@@ -217,7 +219,7 @@
 <span class="o">//</span> <span class="err">同时不小于</span> <span class="nt">2</span>
 <span class="nt">li</span><span class="nd">:first-child:nth-last-child</span><span class="o">(</span><span class="nt">n</span><span class="o">+</span><span class="nt">2</span><span class="o">)</span><span class="nd">:nth-last-child</span><span class="o">(</span><span class="nt">-n</span><span class="o">+</span><span class="nt">6</span><span class="o">),</span>
 <span class="nt">li</span><span class="nd">:first-child:nth-last-child</span><span class="o">(</span><span class="nt">n</span><span class="o">+</span><span class="nt">2</span><span class="o">)</span><span class="nd">:nth-last-child</span><span class="o">(</span><span class="nt">-n</span><span class="o">+</span><span class="nt">6</span><span class="o">)</span> <span class="o">~</span> <span class="nt">li</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="err">子元素数量为</span> <span class="m">2</span><span class="err">–</span><span class="m">6</span> <span class="err">的</span> <span class="n">ul</span> <span class="err">下的</span> <span class="n">li</span>
+  <span class="o">//</span> <span class="err">子元素数量为</span> <span class="m">2</span><span class="err">–</span><span class="m">6</span> <span class="err">的</span> <span class="n">ul</span> <span class="err">下的</span> <span class="n">li</span>
 <span class="p">}</span></code></pre></div>
 
 <h2 id="section-3">响应式背景</h2>
@@ -225,39 +227,39 @@
 <p>占满整个宽度的背景色 + 居中的内容区域：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">footer</span> <span class="p">{</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span> <span class="n">calc</span><span class="p">(</span><span class="m">50%</span> <span class="o">-</span> <span class="m">450px</span><span class="p">);</span>
-    <span class="k">background</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">1em</span> <span class="n">calc</span><span class="p">(</span><span class="m">50%</span> <span class="o">-</span> <span class="m">450px</span><span class="p">);</span>
+  <span class="k">background</span><span class="o">:</span> <span class="m">#333</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h2 id="section-4">垂直居中</h2>
 
 <h3 id="section-5">绝对定位</h3>
 
-<p>定位 + transform 偏移。</p>
+<p>定位 + <code>transform</code>偏移。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">main</span> <span class="p">{</span>
-    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-        <span class="k">top</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
-        <span class="k">left</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
-    <span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-50%</span><span class="o">,</span> <span class="m">-50%</span><span class="p">);</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="n">transform</span><span class="o">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">-50%</span><span class="o">,</span> <span class="m">-50%</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="flex">Flex</h3>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.parent</span> <span class="p">{</span>
-    <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.child</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>或者：</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.parent</span> <span class="p">{</span>
-    <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
-    <span class="n">align</span><span class="o">-</span><span class="n">items</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
-    <span class="k">justify</span><span class="o">-</span><span class="k">content</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="n">align</span><span class="o">-</span><span class="n">items</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">justify</span><span class="o">-</span><span class="k">content</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h2 id="footer">页面下方的 footer</h2>
@@ -265,12 +267,12 @@
 <p>目标：当页面很短的时候，footer 要位于页面底部。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-    <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
-    <span class="n">flex</span><span class="o">-</span><span class="n">flow</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
+  <span class="k">display</span><span class="o">:</span> <span class="n">flex</span><span class="p">;</span>
+  <span class="n">flex</span><span class="o">-</span><span class="n">flow</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">main</span> <span class="p">{</span> 
-    <span class="n">flex</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span> 
+<span class="nt">main</span> <span class="p">{</span>
+  <span class="n">flex</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 

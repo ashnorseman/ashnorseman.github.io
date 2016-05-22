@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>CSS3 与用户体验</title>
-  <meta name="description" content="鼠标">
+  <meta name="description" content="代码示例">
   
   <meta name="author" content="Ash Norseman">
   <meta name="copyright" content="&copy; Ash Norseman 2016">
@@ -39,7 +39,7 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="鼠标" />
+  <meta property="og:description" content="代码示例" />
   <meta property="og:url" content="http://ashnorseman.github.io" />
   <meta property="og:site_name" content="Until the Light takes us" />
   <meta property="og:title" content="CSS3 与用户体验" />
@@ -54,7 +54,7 @@
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CSS3 与用户体验">
-  <meta name="twitter:description" content="鼠标">
+  <meta name="twitter:description" content="代码示例">
   <meta name="twitter:image" content="http://ashnorseman.github.io/assets/logo.png">
   <meta name="twitter:url" content="http://ashnorseman.github.io">
   
@@ -146,53 +146,59 @@
 </section>
 
 <article class="post-content">
-  <h2 id="section">鼠标</h2>
+  <p><a href="http://codepen.io/AshNorseman/pen/zqXJdQ" target="_blank">代码示例</a></p>
+
+<h2 id="section">鼠标</h2>
 
 <h3 id="section-1">禁用元素</h3>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:disabled</span><span class="o">,</span> 
-<span class="o">[</span><span class="nt">disabled</span><span class="o">],</span> 
+<p><code>disabled</code>元素应当在鼠标样式上有所体现。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nd">:disabled</span><span class="o">,</span>
+<span class="o">[</span><span class="nt">disabled</span><span class="o">],</span>
 <span class="o">[</span><span class="nt">aria-disabled</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="o">]</span> <span class="p">{</span>
-    <span class="k">cursor</span><span class="o">:</span> <span class="n">not</span><span class="o">-</span><span class="n">allowed</span><span class="p">;</span>
+  <span class="k">cursor</span><span class="o">:</span> <span class="n">not</span><span class="o">-</span><span class="n">allowed</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-2">隐藏鼠标</h3>
 
+<p>必要时可设置鼠标为<code>none</code>隐藏。</p>
+
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">video</span> <span class="p">{</span>
-    <span class="k">cursor</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+  <span class="k">cursor</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <!--break-->
 
 <h2 id="section-3">拓展可点击区域</h2>
 
-<p>可用透明边框解决问题。</p>
+<p>可用透明边框扩展出点击区域解决问题。</p>
 
-<p>缺点：边框会影响布局！</p>
+<p>缺点：边框会影响布局和周边元素的相对位置！</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span> <span class="p">{</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">solid</span> <span class="k">transparent</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">不要忘记取消边框的可点击区域</span>
-    <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
-    
-    <span class="o">//</span> <span class="err">加阴影时，必须用内置</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span> <span class="err">了</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">3</span><span class="p">)</span> <span class="k">inset</span><span class="p">;</span>
+  <span class="o">//</span> <span class="err">不要忘记设置背景的可视范围</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+
+  <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">solid</span> <span class="k">transparent</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">加阴影时，必须用内置</span> <span class="n">box</span><span class="o">-</span><span class="n">shadow</span> <span class="err">了</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">3</span><span class="p">)</span> <span class="k">inset</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
-<p>优化解法的原理：伪元素依然可以相应父元素的事件。</p>
+<p>优化解法的原理：用伪元素生成一个透明的遮罩，依然可以相应父元素的事件。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span> <span class="p">{</span>
-    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">button</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
-    <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-        <span class="k">top</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span> 
-        <span class="k">right</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
-        <span class="k">bottom</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span> 
-        <span class="k">left</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
+    <span class="k">right</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
+    <span class="k">bottom</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span> <span class="m">-10px</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
 <h2 id="section-4">遮罩</h2>
@@ -202,41 +208,44 @@
 <p>给弹了遮罩层的 body 元素加一个伪元素</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span><span class="nc">.dimmed</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
-    <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
-        <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-        <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-        <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-        <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-        <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="o">.</span><span class="m">8</span><span class="p">);</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+
+    <span class="o">//</span> <span class="err">根据系统的实际情况设置</span>
+    <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+
+  <span class="k">background</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
-<p>问题：无法在伪元素上绑定 JavaScript 事件。</p>
+<p>问题：无法在伪元素上绑定 JavaScript 事件，但可以通过检测点击的范围解决（应当是目前比较好的解决方案）。</p>
 
-<p>第二种方法：为弹层添加 box-shadow。</p>
+<p>第二种方法：为弹层添加<code>box-shadow</code>。</p>
 
 <p>缺点：</p>
 
 <ol>
-  <li>如果页面很长，一滚动就现原形，因此只适用于 position: fixed 的元素。</li>
-  <li>box-shadow 无法捕获鼠标事件</li>
+  <li>如果页面很长，一滚动就现原形，因此只适用于<code>position: fixed</code>的元素。</li>
+  <li><code>box-shadow</code>无法捕获鼠标事件</li>
 </ol>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal</span> <span class="p">{</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">50</span><span class="n">vmax</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,</span><span class="m">0</span><span class="o">,.</span><span class="m">8</span><span class="p">);</span>
+  <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">50</span><span class="n">vmax</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <h3 id="section-6">毛玻璃遮罩</h3>
 
-<p>添加 blur 等滤镜。</p>
+<p>添加<code>blur</code>等滤镜。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-    <span class="n">transition</span><span class="o">:</span> <span class="m">.6s</span> <span class="n">filter</span><span class="p">;</span>
+  <span class="n">transition</span><span class="o">:</span> <span class="m">0.6s</span> <span class="n">filter</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nt">body</span><span class="nc">.dimmed</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="err">同时降低亮度和饱和度</span>
-    <span class="n">filter</span><span class="o">:</span> <span class="n">blur</span><span class="p">(</span><span class="m">3px</span><span class="p">)</span> <span class="n">contrast</span><span class="p">(</span><span class="o">.</span><span class="m">8</span><span class="p">)</span> <span class="n">brightness</span><span class="p">(</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
+  <span class="o">//</span> <span class="err">同时降低亮度和饱和度</span>
+  <span class="n">filter</span><span class="o">:</span> <span class="n">blur</span><span class="p">(</span><span class="m">3px</span><span class="p">)</span> <span class="n">contrast</span><span class="p">(</span><span class="o">.</span><span class="m">8</span><span class="p">)</span> <span class="n">brightness</span><span class="p">(</span><span class="o">.</span><span class="m">8</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 

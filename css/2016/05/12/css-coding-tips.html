@@ -146,7 +146,7 @@
 </section>
 
 <article class="post-content">
-  <p><a href="http://codepen.io/AshNorseman/pen/PNLLrW">代码示例</a></p>
+  <p><a href="http://codepen.io/AshNorseman/pen/PNLLrW" target="_blank">代码示例</a></p>
 
 <h2 id="section">尽可能减少重复代码</h2>
 
@@ -177,12 +177,12 @@
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span> <span class="p">{</span>
   <span class="o">//</span> <span class="err">依赖于字体的长度值，用</span> <span class="n">em</span> <span class="err">体现</span>
   <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">0.2em</span><span class="p">;</span>
-  
+
   <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0.05em</span> <span class="m">0.25em</span> <span class="nb">salmon</span><span class="p">;</span>
-  
+
   <span class="o">//</span> <span class="err">用百分比或`</span><span class="n">em</span><span class="err">`来定义字体，当父元素字体变化的时候，可以随之改变</span>
   <span class="k">font-size</span><span class="o">:</span> <span class="m">1.25em</span><span class="p">;</span>
-  
+
   <span class="k">line-height</span><span class="o">:</span> <span class="m">1</span><span class="o">.</span><span class="m">5</span><span class="p">;</span>
   <span class="k">padding</span><span class="o">:</span> <span class="m">0.3em</span> <span class="m">0.8em</span><span class="p">;</span>
   <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">-0.05em</span> <span class="m">0.05em</span> <span class="n">fireBrick</span><span class="p">;</span>
@@ -193,27 +193,27 @@
 <p><strong>进一步优化：考虑阴影在其他底色下的显示，使用纯黑/纯白叠加透明度的实现。</strong></p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span> <span class="p">{</span>
-    
+
   <span class="o">//</span> <span class="err">底色叠加白色</span> <span class="o">-&gt;</span> <span class="err">透明的蒙版</span>
   <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">)</span><span class="o">,</span> <span class="k">transparent</span><span class="p">);</span>
 
   <span class="o">//</span> <span class="err">边框则是黑丝效果</span>
   <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">1</span><span class="p">);</span>
-  
+
   <span class="o">//</span> <span class="err">按钮底部的颜色应更深一些</span>
   <span class="k">border-bottom-color</span><span class="o">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">3</span><span class="p">);</span>
-  
+
   <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0.05em</span> <span class="m">.25em</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
   <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">-0.05em</span> <span class="m">0.05em</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
 
 <p>在添加其他颜色按钮的时候，只需更改<code>background-color</code>即可。</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span><span class="nc">.ok</span> <span class="p">{</span> 
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span><span class="nc">.ok</span> <span class="p">{</span>
   <span class="k">background-color</span><span class="o">:</span> <span class="n">mediumSeaGreen</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">button</span><span class="nc">.cancel</span> <span class="p">{</span> 
+<span class="nt">button</span><span class="nc">.cancel</span> <span class="p">{</span>
   <span class="k">background-color</span><span class="o">:</span> <span class="nb">crimson</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
@@ -222,12 +222,12 @@
 <p>这两点有时互相冲突。今天写的少，不代表将来改动少。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">button</span> <span class="p">{</span>
-  
+
   <span class="o">//</span> <span class="err">一行代码搞定，但如果要修改边框宽度，需修改三个值</span>
   <span class="k">border-width</span><span class="o">:</span> <span class="m">10px</span> <span class="m">10px</span> <span class="m">10px</span> <span class="m">0</span><span class="p">;</span>
-  
+
   <span class="o">//</span> <span class="err">多行代码，但只需修改一处，而且更清晰</span>
-  <span class="k">border-width</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span> 
+  <span class="k">border-width</span><span class="o">:</span> <span class="m">10px</span><span class="p">;</span>
   <span class="k">border-left-width</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
 
@@ -238,7 +238,7 @@
 <p>这个关键词有时用的不知不觉，比如在设置<code>border</code>的时候很常见：<code>border: 1px solid;</code>，自动采用前景色为边框颜色。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">hr</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">:</span> <span class="n">currentColor</span><span class="p">;</span> 
+  <span class="k">background</span><span class="o">:</span> <span class="n">currentColor</span><span class="p">;</span>
   <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="k">height</span><span class="o">:</span> <span class="m">0.5em</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
@@ -249,9 +249,9 @@
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">//</span> <span class="err">令表单元素继承正文字体</span>
 <span class="nt">button</span><span class="o">,</span>
-<span class="nt">input</span><span class="o">,</span> 
-<span class="nt">select</span> <span class="p">{</span> 
-  <span class="k">font</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span> 
+<span class="nt">input</span><span class="o">,</span>
+<span class="nt">select</span> <span class="p">{</span>
+  <span class="k">font</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="o">//</span> <span class="err">令</span> <span class="nt">a</span> <span class="err">元素继承正文颜色</span>
@@ -261,7 +261,7 @@
 
 <p>悬浮气泡上的三角形，继承气泡的背景和边框：</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.tool-tip</span> <span class="p">{</span> 
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.tool-tip</span> <span class="p">{</span>
   <span class="k">background-color</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
   <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
   <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
@@ -270,15 +270,15 @@
   <span class="k">width</span><span class="o">:</span> <span class="m">30%</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nc">.tool-tip</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span> 
-  <span class="k">background</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span> 
+<span class="nc">.tool-tip</span><span class="o">:</span><span class="nd">:before</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
   <span class="k">border</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
-  <span class="k">border-right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> 
+  <span class="k">border-right</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="k">border-bottom</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="k">content</span><span class="o">:</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
-  <span class="k">padding</span><span class="o">:</span> <span class="m">0.35em</span><span class="p">;</span> 
+  <span class="k">padding</span><span class="o">:</span> <span class="m">0.35em</span><span class="p">;</span>
   <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-    <span class="k">top</span><span class="o">:</span> <span class="m">-0.4em</span><span class="p">;</span> 
+    <span class="k">top</span><span class="o">:</span> <span class="m">-0.4em</span><span class="p">;</span>
     <span class="k">left</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
   <span class="n">transform</span><span class="o">:</span> <span class="n">rotate</span><span class="p">(</span><span class="m">45</span><span class="n">deg</span><span class="p">);</span>
 <span class="p">}</span></code></pre></div>
@@ -307,10 +307,10 @@
 <p><code>background</code>、<code>font</code>等缩写很有用，但有时会产生一些副作用。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-  
+
   <span class="o">//</span> <span class="err">同时覆盖了</span> <span class="k">background-image</span> <span class="err">等值</span>
   <span class="k">background</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
-  
+
   <span class="o">//</span> <span class="err">只设置颜色</span>
   <span class="k">background-color</span><span class="o">:</span> <span class="nb">salmon</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
@@ -318,18 +318,18 @@
 <p>缩写和单个属性可以结合使用，关键是明确缩写会覆盖什么值。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-  
+
   <span class="o">//</span> <span class="err">重复设置了</span> <span class="k">background</span><span class="o">-</span><span class="k">size</span> <span class="err">和</span> <span class="k">background-repeat</span>
-  <span class="k">background</span><span class="o">:</span> 
-    <span class="sx">url(tr.png)</span> <span class="k">no-repeat</span> <span class="k">top</span> <span class="k">right</span> <span class="o">/</span> <span class="m">2em</span> <span class="m">2em</span><span class="o">,</span> 
+  <span class="k">background</span><span class="o">:</span>
+    <span class="sx">url(tr.png)</span> <span class="k">no-repeat</span> <span class="k">top</span> <span class="k">right</span> <span class="o">/</span> <span class="m">2em</span> <span class="m">2em</span><span class="o">,</span>
     <span class="sx">url(br.png)</span> <span class="k">no-repeat</span> <span class="k">bottom</span> <span class="k">right</span> <span class="o">/</span> <span class="m">2em</span> <span class="m">2em</span><span class="o">,</span>
     <span class="sx">url(bl.png)</span> <span class="k">no-repeat</span> <span class="k">bottom</span> <span class="k">left</span> <span class="o">/</span> <span class="m">2em</span> <span class="m">2em</span><span class="p">;</span>
-  
+
   <span class="o">//</span> <span class="err">合理拆分</span>
-  <span class="k">background</span><span class="o">:</span> 
-    <span class="sx">url(tr.png)</span> <span class="k">top</span> <span class="k">right</span><span class="o">,</span> 
+  <span class="k">background</span><span class="o">:</span>
+    <span class="sx">url(tr.png)</span> <span class="k">top</span> <span class="k">right</span><span class="o">,</span>
     <span class="sx">url(br.png)</span> <span class="k">bottom</span> <span class="k">right</span><span class="o">,</span>
-    <span class="sx">url(bl.png)</span> <span class="k">bottom</span> <span class="k">left</span><span class="p">;</span> 
+    <span class="sx">url(bl.png)</span> <span class="k">bottom</span> <span class="k">left</span><span class="p">;</span>
   <span class="k">background</span><span class="o">-</span><span class="k">size</span><span class="o">:</span> <span class="m">2em</span> <span class="m">2em</span><span class="p">;</span>
   <span class="k">background-repeat</span><span class="o">:</span> <span class="k">no-repeat</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div>
