@@ -213,19 +213,23 @@ table {
   width: 100%; }
 
 th {
-  border-bottom: 1px solid #b7b7b7;
+  border: 1px solid #ddd;
   font-weight: 600;
-  padding: 14.4px 0;
+  padding: 14.4px;
   text-align: left; }
 
 td {
-  border-bottom: 1px solid #ddd;
-  padding: 14.4px 0; }
+  border: 1px solid #ddd;
+  padding: 14.4px; }
 
 tr,
 td,
 th {
   vertical-align: middle; }
+
+td[colspan],
+td[rowspan] {
+  text-align: center; }
 
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
