@@ -752,3 +752,12 @@ blockquote {
           margin-right: 0; } }
     .site-footer .site-signature a {
       text-decoration: underline; }
+
+#markdown-toc {
+  list-style: none;
+  padding: 0; }
+  #markdown-toc ul {
+    list-style: none;
+    padding-left: 2em; }
+  #markdown-toc ul ul {
+    display: none; }
