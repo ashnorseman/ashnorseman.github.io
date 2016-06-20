@@ -507,6 +507,8 @@ blockquote {
   .page-content .home .post-excerpt ul,
   .page-content .home .post-excerpt blockquote {
     margin: 0; }
+  .page-content .home .post-excerpt hr {
+    margin: 0.5rem 0; }
   .page-content .post-list {
     padding-top: 1em !important; }
   .page-content .post-meta {
