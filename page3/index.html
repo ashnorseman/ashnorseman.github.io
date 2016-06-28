@@ -101,6 +101,8 @@
         
           
         
+          
+        
       </ul>
     </nav>
   </div>
@@ -112,6 +114,66 @@
 <div class="wrapper">
 
 <ul class="post-list">
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/css/2016/05/13/css3-background-and-border.html">CSS3 背景与边框</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p><p><a href="http://codepen.io/AshNorseman/pen/BKEjjd" target="_blank">代码示例</a></p>
+
+<h2 id="section">边框</h2>
+
+<h3 id="section-1">半透明边框</h3>
+
+<ul>
+  <li>使用 rgba 或 hsla 格式的颜色生成半透明效果</li>
+  <li>但是，会有问题……</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+  <span class="o">//</span> <span class="err">白色背景和白色半透明边框重叠在一起！</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">dashed</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<p>解决方案：修改<code>background-clip</code>属性。</p>
+
+<ul>
+  <li>border-box（默认）</li>
+  <li>padding-box（留出边框）</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">May 13, 2016</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/css">
+          
+            
+          
+            CSS
+          
+            
+          
+            
+          
+        </a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
   
   <li>
     <h2>
@@ -352,68 +414,20 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/archaeology/2016/04/17/the-origin-of-chinese-civilization.html">中国文明起源</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>
-
-<h2 id="section">中国历史教育的两个怪圈：</h2>
-
-<ol>
-  <li>根深蒂固的中华大一统观念</li>
-  <li>把马克思提出的社会发展规律看成是历史本身</li>
-</ol>
-
-<h2 id="section-1">研究瓦鬲</h2>
-
-<p>研究发掘材料首先要解决两个问题：</p>
-
-<ol>
-  <li>数以千计的器物都应该有它们本来历史的、逻辑的顺序</li>
-  <li>作为一批有组织的人们的群体活动遗迹，在中国古代社会、文化史中应该有它们特定的地位和作用</li>
-</ol>
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">April 17, 2016</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/archaeology">
-          
-            
-          
-            
-          
-            
-          
-            考古学
-          
-        </a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
 <nav class="pagination" role="navigation">
   <p>
     
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
+    <a class="newer-posts" href="/page4">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
     
-    <span class="page-number">Page 3 of 3</span>
+    <span class="page-number">Page 3 of 4</span>
     
       
       <a class="newer-posts" href="/page2">
@@ -456,6 +470,8 @@
         
         
           <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
         
         
         
