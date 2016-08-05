@@ -119,6 +119,73 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/css/2016/05/15/css3-text.html">CSS3 文字</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p><p><a href="http://codepen.io/AshNorseman/pen/ONGvRJ" target="_blank">代码示例</a></p>
+
+<h2 id="section">文字</h2>
+
+<h3 id="section-1">自动添加连字符</h3>
+
+<p>再也不需要<code>text-align: justify</code>了。</p>
+
+<p>前提是在单词可换行处添加<code>&amp;shy;</code>。</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>
+  President Clinton&#39;s de<span class="ni">&amp;shy;</span>ci<span class="ni">&amp;shy;</span>sion on Apr.8
+  to send Chin<span class="ni">&amp;shy;</span>ese Premier Zhu Rong<span class="ni">&amp;shy;</span>ji pack<span class="ni">&amp;shy;</span>ing
+  with<span class="ni">&amp;shy;</span>out an agree<span class="ni">&amp;shy;</span>ment on China&#39;s
+  en<span class="ni">&amp;shy;</span>try into the World Trade Or<span class="ni">&amp;shy;</span>gani<span class="ni">&amp;shy;</span>za<span class="ni">&amp;shy;</span>tion
+  seemed to be a mas<span class="ni">&amp;shy;</span>sive mis<span class="ni">&amp;shy;</span>cal<span class="ni">&amp;shy;</span>cu<span class="ni">&amp;shy;</span>la<span class="ni">&amp;shy;</span>tion.
+<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">p</span> <span class="p">{</span>
+  <span class="n">hyphens</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="section-2">强行换行</h3>
+
+<p>使用 Unicode 提供的换行符：0x000A。</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">dd</span><span class="o">:</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;\A&quot;</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="err">防止和其他空白字符互相吞噬</span>
+  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">May 15, 2016</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/css">
+          
+            
+          
+            CSS
+          
+            
+          
+            
+          
+            
+          
+        </a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/css/2016/05/14/css3-visual-effects.html">CSS3 视觉效果</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -339,64 +406,6 @@
             
           
             
-          
-            
-          
-        </a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/archaeology/2016/05/12/the-chinese-bronzes-2.html">中国青铜器（二）</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>
-
-<h2 id="section">纹饰</h2>
-
-<h3 id="section-1">兽面纹</h3>
-
-<p>以鼻梁为中线，两侧作对称排列，上端第一道是角，角下有目，形象比较具体的兽面纹在目上还有眉，目的两侧有的有耳，多数兽面纹有曲张的爪，两侧有左右展开的体躯或兽尾，少数简略形式的没有兽的体部或尾部。</p>
-
-<p>突出的角型是区别各类兽面纹的主要标志：</p>
-
-<ul>
-  <li>环柱角型</li>
-  <li>牛角型</li>
-  <li>外卷角型</li>
-  <li>羊角型</li>
-  <li>内卷角型</li>
-  <li>曲折角型</li>
-  <li>龙角型</li>
-  <li>长颈鹿角型</li>
-  <li>虎头型</li>
-  <li>熊头型</li>
-  <li>龙蛇集群型</li>
-</ul>
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">May 12, 2016</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/archaeology">
-          
-            
-          
-            
-          
-            
-          
-            考古学
           
             
           
