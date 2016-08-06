@@ -105,6 +105,8 @@
         
           
         
+          
+        
       </ul>
     </nav>
   </div>
@@ -116,6 +118,60 @@
 <div class="wrapper">
 
 <ul class="post-list">
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/css/2016/05/15/css3-layout.html">CSS3 布局</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p><p><a href="http://codepen.io/AshNorseman/pen/dMLgRV" target="_blank">代码示例</a></p>
+
+<h2 id="section">自适应宽度</h2>
+
+<p>使用新的 CSS 关键字：<code>min-content</code>。即子元素中最大的一个不可分割元素的大小。</p>
+
+<ul>
+  <li><code>max-content</code>类似于将元素设为<code>display-inline</code>得到的宽度</li>
+  <li><code>fit-content</code>类似于将元素设为浮动得到的的宽度</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">figure</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="n">min</span><span class="o">-</span><span class="k">content</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">figure</span> <span class="o">&gt;</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="k">max-width</span><span class="o">:</span> <span class="k">inherit</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">May 15, 2016</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/css">
+          
+            
+          
+            CSS
+          
+            
+          
+            
+          
+            
+          
+        </a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
   
   <li>
     <h2>
@@ -350,68 +406,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/css/2016/05/13/css3-background-and-border.html">CSS3 背景与边框</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p><p><a href="http://codepen.io/AshNorseman/pen/BKEjjd" target="_blank">代码示例</a></p>
-
-<h2 id="section">边框</h2>
-
-<h3 id="section-1">半透明边框</h3>
-
-<ul>
-  <li>使用 rgba 或 hsla 格式的颜色生成半透明效果</li>
-  <li>但是，会有问题……</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="err">白色背景和白色半透明边框重叠在一起！</span>
-  <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
-  <span class="k">border</span><span class="o">:</span> <span class="m">10px</span> <span class="k">dashed</span> <span class="n">rgba</span><span class="p">(</span><span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">255</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
-
-<p>解决方案：修改<code>background-clip</code>属性。</p>
-
-<ul>
-  <li>border-box（默认）</li>
-  <li>padding-box（留出边框）</li>
-</ul>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span> <span class="p">{</span>
-  <span class="k">background</span><span class="o">-</span><span class="k">clip</span><span class="o">:</span> <span class="k">padding</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">May 13, 2016</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/css">
-          
-            
-          
-            CSS
-          
-            
-          
-            
-          
-            
-          
-        </a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -425,7 +419,7 @@
       </span>
     </a>
     
-    <span class="page-number">Page 4 of 5</span>
+    <span class="page-number">Page 4 of 6</span>
     
       
       <a class="newer-posts" href="/page3">
@@ -468,6 +462,8 @@
         
         
           <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
         
         
         
