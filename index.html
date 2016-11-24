@@ -123,6 +123,55 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/javascript/2016/11/25/rxjs.html">RxJS 速查</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>
+
+<h2 id="creating-observables">Creating Observables</h2>
+
+<h3 id="ajax-calls">Ajax calls</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Rx</span><span class="p">.</span><span class="nx">DOM</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/api/contents.json&#39;</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span>
+  <span class="kd">function</span> <span class="nx">onNext</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="kd">function</span> <span class="nx">onError</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span></code></pre></div>
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">November 25, 2016</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/javascript">
+          
+            Javacript
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/javascript/2016/11/24/typescript.html">TypeScript 速查</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -298,42 +347,6 @@
     </section>
     <section class="post-meta">
       <div class="post-date">August 26, 2016</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/paleography">
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            古文字
-          
-        </a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/paleography/2016/08/08/guo-ji-zi-bai-pan.html">虢季子白盘</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p><p><img src="/assets/images/guo-ji-zi-bai-pan.jpg" alt="虢季子白盘铭文" /></p>
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">August 8, 2016</div>
       <div class="post-categories">
       in 
         
