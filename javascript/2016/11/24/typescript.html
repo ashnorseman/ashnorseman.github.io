@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TypeScript 速查</title>
+  <meta name="description" content="">
+  
+  <meta name="author" content="Ash Norseman">
+  <meta name="copyright" content="&copy; Ash Norseman 2016">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="http://ashnorseman.github.io" />
+  <meta property="og:site_name" content="Until the Light takes us" />
+  <meta property="og:title" content="TypeScript 速查" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://ashnorseman.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TypeScript 速查">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="http://ashnorseman.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://ashnorseman.github.io">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://ashnorseman.github.io/javascript/2016/11/24/typescript.html">
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <span>Until the Light takes us</span>
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">TypeScript 速查</h1>
+      <p class="info">by <strong>Ash Norseman</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">November 24, 2016</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/javascript">
+			
+				Javacript
+			
+				
+			
+				
+			
+				
+			
+				
+			
+		</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <ul id="markdown-toc">
+  <li><a href="#section" id="markdown-toc-section">基本类型</a>    <ul>
+      <li><a href="#boolean" id="markdown-toc-boolean">Boolean</a></li>
+      <li><a href="#number" id="markdown-toc-number">Number</a></li>
+      <li><a href="#string" id="markdown-toc-string">String</a></li>
+      <li><a href="#array" id="markdown-toc-array">Array</a></li>
+      <li><a href="#enum" id="markdown-toc-enum">Enum</a></li>
+      <li><a href="#any" id="markdown-toc-any">Any</a></li>
+      <li><a href="#void" id="markdown-toc-void">Void</a></li>
+      <li><a href="#null-and-undefined" id="markdown-toc-null-and-undefined">Null and Undefined</a></li>
+      <li><a href="#never" id="markdown-toc-never">Never</a></li>
+      <li><a href="#type-assertions" id="markdown-toc-type-assertions">Type assertions</a></li>
+    </ul>
+  </li>
+  <li><a href="#interfaces" id="markdown-toc-interfaces">Interfaces</a>    <ul>
+      <li><a href="#section-1" id="markdown-toc-section-1">可省略的属性</a></li>
+      <li><a href="#section-2" id="markdown-toc-section-2">只读属性</a></li>
+      <li><a href="#section-3" id="markdown-toc-section-3">绕过类型检测的方式</a></li>
+      <li><a href="#function-types" id="markdown-toc-function-types">Function Types</a></li>
+      <li><a href="#indexable-types" id="markdown-toc-indexable-types">Indexable Types</a></li>
+      <li><a href="#class-types" id="markdown-toc-class-types">Class Types</a></li>
+      <li><a href="#interface-" id="markdown-toc-interface-">Interface 的扩展</a></li>
+      <li><a href="#section-4" id="markdown-toc-section-4">混合类型</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-5" id="markdown-toc-section-5">类</a>    <ul>
+      <li><a href="#publicprivate--protected-" id="markdown-toc-publicprivate--protected-">Public、private 和 protected 修饰符</a></li>
+      <li><a href="#section-6" id="markdown-toc-section-6">只读属性</a></li>
+      <li><a href="#section-7" id="markdown-toc-section-7">快速定义属性</a></li>
+      <li><a href="#section-8" id="markdown-toc-section-8">抽象类</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-9" id="markdown-toc-section-9">函数</a>    <ul>
+      <li><a href="#section-10" id="markdown-toc-section-10">函数类型</a></li>
+      <li><a href="#section-11" id="markdown-toc-section-11">可省略参数</a></li>
+      <li><a href="#section-12" id="markdown-toc-section-12">默认参数</a></li>
+      <li><a href="#rest-" id="markdown-toc-rest-">Rest 参数</a></li>
+      <li><a href="#section-13" id="markdown-toc-section-13">重载</a></li>
+    </ul>
+  </li>
+  <li><a href="#generics" id="markdown-toc-generics">Generics</a>    <ul>
+      <li><a href="#generic-array" id="markdown-toc-generic-array">Generic Array</a></li>
+      <li><a href="#generic-classes" id="markdown-toc-generic-classes">Generic Classes</a></li>
+      <li><a href="#section-14" id="markdown-toc-section-14">限制范围</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!--toc-->
+
+<h2 id="section">基本类型</h2>
+
+<h3 id="boolean">Boolean</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">isDone</span><span class="o">:</span> <span class="kr">boolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span></code></pre></div>
+
+<h3 id="number">Number</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">decimal</span><span class="o">:</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span></code></pre></div>
+
+<h3 id="string">String</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">color</span><span class="o">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">fullName</span><span class="o">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="s1">&#39;Bob Bobbington&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">sentence</span><span class="o">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="err">`</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">my</span> <span class="nx">name</span> <span class="nx">is</span> <span class="nx">$</span><span class="p">{</span><span class="nx">fullName</span><span class="p">}.</span><span class="err">`</span></code></pre></div>
+
+<h3 id="array">Array</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">list</span><span class="o">:</span> <span class="nx">number</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span></code></pre></div>
+
+<!--break-->
+
+<h3 id="enum">Enum</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">enum</span> <span class="nx">Color</span> <span class="p">{</span><span class="nx">Red</span><span class="p">,</span> <span class="nx">Green</span><span class="p">,</span> <span class="nx">Blue</span><span class="p">};</span>
+<span class="kd">let</span> <span class="nx">c</span><span class="o">:</span> <span class="nx">Color</span> <span class="o">=</span> <span class="nx">Color</span><span class="p">.</span><span class="nx">Green</span><span class="p">;</span>
+
+<span class="kr">enum</span> <span class="nx">Color</span> <span class="p">{</span><span class="nx">Red</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">Green</span><span class="p">,</span> <span class="nx">Blue</span><span class="p">};</span>
+<span class="kd">let</span> <span class="nx">colorName</span><span class="o">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">Color</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>   <span class="c1">// &#39;Green&#39;</span></code></pre></div>
+
+<h3 id="any">Any</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">notSure</span><span class="o">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nx">notSure</span> <span class="o">=</span> <span class="s1">&#39;maybe a string instead&#39;</span><span class="p">;</span>
+<span class="nx">notSure</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">list</span><span class="o">:</span> <span class="nx">any</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="s2">&quot;free&quot;</span><span class="p">];</span></code></pre></div>
+
+<p>对比：Object 类型可以任意赋值，但不能调用方法。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">notSure</span><span class="o">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nx">notSure</span><span class="p">.</span><span class="nx">ifItExists</span><span class="p">();</span>
+<span class="nx">notSure</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">();</span>
+
+<span class="kd">let</span> <span class="nx">prettySure</span><span class="o">:</span> <span class="nb">Object</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="nx">prettySure</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">();</span>   <span class="c1">// Error: Property &#39;toFixed&#39; doesn&#39;t exist on type &#39;Object&#39;.</span></code></pre></div>
+
+<h3 id="void">Void</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">warnUser</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;This is my warning message&#39;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="null-and-undefined">Null and Undefined</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">u</span><span class="o">:</span> <span class="kc">undefined</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">n</span><span class="o">:</span> <span class="kc">null</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span></code></pre></div>
+
+<p>默认情况下，null 和 undefined 是其他类型的子类型。也就是说，可以把 null 或 undefined 赋值给其他类型的变量。开启 <code>--strictNullChecks</code> 禁用上述规则。</p>
+
+<h3 id="never">Never</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">error</span><span class="p">(</span><span class="nx">message</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">never</span> <span class="p">{</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">fail</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Something failed&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">infiniteLoop</span><span class="p">()</span><span class="o">:</span> <span class="nx">never</span> <span class="p">{</span>
+  <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="type-assertions">Type assertions</h3>
+
+<p>类似于其他语言的「类型转换」，但仅仅起到告知编译器的作用，对代码执行本身没有任何影响。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">someValue</span><span class="o">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="s1">&#39;this is a string&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">strLength</span><span class="o">:</span> <span class="nx">number</span> <span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="nx">someValue</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span>
+
+<span class="c1">// JSX 环境下使用如下语法：</span>
+<span class="kd">let</span> <span class="nx">someValue</span><span class="o">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="s1">&#39;this is a string&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">strLength</span><span class="o">:</span> <span class="nx">number</span> <span class="o">=</span> <span class="p">(</span><span class="nx">someValue</span> <span class="nx">as</span> <span class="nx">string</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span></code></pre></div>
+
+<h2 id="interfaces">Interfaces</h2>
+
+<p>定义变量的「形状」。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">LabelledValue</span> <span class="p">{</span>
+  <span class="nx">label</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">printLabel</span><span class="p">(</span><span class="nx">labelledObj</span><span class="o">:</span> <span class="nx">LabelledValue</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">labelledObj</span><span class="p">.</span><span class="nx">label</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">size</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;Size 10 Object&#39;</span> <span class="p">};</span>
+<span class="nx">printLabel</span><span class="p">(</span><span class="nx">myObj</span><span class="p">);</span></code></pre></div>
+
+<p>使用未定义的属性会报错，防止拼写错误。如上述代码中拼错 label：<code>labelledObj. lable</code>，编译器会报错。</p>
+
+<h3 id="section-1">可省略的属性</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">SquareConfig</span> <span class="p">{</span>
+  <span class="nx">color</span><span class="o">?:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">width</span><span class="o">?:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createSquare</span><span class="p">(</span><span class="nx">config</span><span class="o">:</span> <span class="nx">SquareConfig</span><span class="p">)</span><span class="o">:</span> <span class="p">{</span> <span class="nx">color</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span> <span class="nx">area</span><span class="o">:</span> <span class="nx">number</span> <span class="p">}</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">mySquare</span> <span class="o">=</span> <span class="nx">createSquare</span><span class="p">({</span> <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;black&#39;</span> <span class="p">});</span></code></pre></div>
+
+<h3 id="section-2">只读属性</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">Point</span> <span class="p">{</span>
+  <span class="nx">readonly</span> <span class="nx">x</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+  <span class="nx">readonly</span> <span class="nx">y</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">p1</span><span class="o">:</span> <span class="nx">Point</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="mi">20</span> <span class="p">};</span>
+<span class="nx">p1</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>   <span class="c1">// Error!</span></code></pre></div>
+
+<p>只读数组：不允许对数组做任何操作，包括修改和增删元素。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">ro</span><span class="o">:</span> <span class="nx">ReadonlyArray</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span></code></pre></div>
+
+<h3 id="section-3">绕过类型检测的方式</h3>
+
+<p>Type assertion:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">mySquare</span> <span class="o">=</span> <span class="nx">createSquare</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">SquareConfig</span><span class="o">&gt;</span><span class="p">{</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">opacity</span><span class="o">:</span> <span class="mf">0.5</span> <span class="p">});</span></code></pre></div>
+
+<p>或者定义允许其他任意属性：</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">SquareConfig</span> <span class="p">{</span>
+  <span class="nx">color</span><span class="o">?:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">width</span><span class="o">?:</span> <span class="nx">number</span><span class="p">;</span>
+  <span class="p">[</span><span class="nx">propName</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">any</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="function-types">Function Types</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">SearchFunc</span> <span class="p">{</span>
+  <span class="p">(</span><span class="nx">source</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">subString</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="kr">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">mySearch</span><span class="o">:</span> <span class="nx">SearchFunc</span><span class="p">;</span>
+<span class="nx">mySearch</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">src</span><span class="p">,</span> <span class="nx">sub</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="indexable-types">Indexable Types</h3>
+
+<p>index 支持 number 和 string 类型。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">StringArray</span> <span class="p">{</span>
+  <span class="p">[</span><span class="nx">index</span><span class="o">:</span> <span class="nx">number</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">myArray</span><span class="o">:</span> <span class="nx">StringArray</span><span class="p">;</span>
+<span class="nx">myArray</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Fred&#39;</span><span class="p">];</span>
+
+<span class="kd">let</span> <span class="nx">myStr</span><span class="o">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">myArray</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span></code></pre></div>
+
+<p>number 类型必须是 string 类型的子类型。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kr">class</span> <span class="nx">Dog</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="nx">breed</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Error: indexing with a &#39;string&#39; will sometimes get you a Dog!</span>
+<span class="kr">interface</span> <span class="nx">NotOkay</span> <span class="p">{</span>
+  <span class="p">[</span><span class="nx">x</span><span class="o">:</span> <span class="nx">number</span><span class="p">]</span><span class="o">:</span> <span class="nx">Animal</span><span class="p">;</span>
+  <span class="p">[</span><span class="nx">x</span><span class="o">:</span> <span class="nx">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">Dog</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>只读：</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">ReadonlyStringArray</span> <span class="p">{</span>
+  <span class="nx">readonly</span> <span class="p">[</span><span class="nx">index</span><span class="o">:</span> <span class="nx">number</span><span class="p">]</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">myArray</span><span class="o">:</span> <span class="nx">ReadonlyStringArray</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">];</span>
+<span class="nx">myArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Mallory&#39;</span><span class="p">;</span> <span class="c1">// error!</span></code></pre></div>
+
+<h3 id="class-types">Class Types</h3>
+
+<p>Interface 只能定义 class 的 public 属性和方法。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">ClockInterface</span> <span class="p">{</span>
+  <span class="nx">currentTime</span><span class="o">:</span> <span class="nb">Date</span><span class="p">;</span>
+  <span class="nx">setTime</span><span class="p">(</span><span class="nx">d</span><span class="o">:</span> <span class="nb">Date</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Clock</span> <span class="kr">implements</span> <span class="nx">ClockInterface</span> <span class="p">{</span>
+  <span class="nx">currentTime</span><span class="o">:</span> <span class="nb">Date</span><span class="p">;</span>
+  <span class="nx">setTime</span><span class="p">(</span><span class="nx">d</span><span class="o">:</span> <span class="nb">Date</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">d</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">h</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">m</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="interface-">Interface 的扩展</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">Shape</span> <span class="p">{</span>
+  <span class="nx">color</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">interface</span> <span class="nx">PenStroke</span> <span class="p">{</span>
+  <span class="nx">penWidth</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">interface</span> <span class="nx">Square</span> <span class="kr">extends</span> <span class="nx">Shape</span><span class="p">,</span> <span class="nx">PenStroke</span> <span class="p">{</span>
+  <span class="nx">sideLength</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">square</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">Square</span><span class="o">&gt;</span><span class="p">{};</span>
+<span class="nx">square</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">;</span>
+<span class="nx">square</span><span class="p">.</span><span class="nx">sideLength</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="nx">square</span><span class="p">.</span><span class="nx">penWidth</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">;</span></code></pre></div>
+
+<h3 id="section-4">混合类型</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">Counter</span> <span class="p">{</span>
+  <span class="p">(</span><span class="nx">start</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">interval</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+  <span class="nx">reset</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getCounter</span><span class="p">()</span><span class="o">:</span> <span class="nx">Counter</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">counter</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">Counter</span><span class="o">&gt;</span><span class="kd">function</span> <span class="p">(</span><span class="nx">start</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">{</span> <span class="p">};</span>
+  <span class="nx">counter</span><span class="p">.</span><span class="nx">interval</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>
+  <span class="nx">counter</span><span class="p">.</span><span class="nx">reset</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="p">};</span>
+  <span class="k">return</span> <span class="nx">counter</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">getCounter</span><span class="p">();</span>
+<span class="nx">c</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">interval</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">;</span></code></pre></div>
+
+<h2 id="section-5">类</h2>
+
+<h3 id="publicprivate--protected-">Public、private 和 protected 修饰符</h3>
+
+<p>默认属性：<code>public</code>。</p>
+
+<p><code>private</code>：无法外部调用。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">theName</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">theName</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">new</span> <span class="nx">Animal</span><span class="p">(</span><span class="s1">&#39;Cat&#39;</span><span class="p">).</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// Error: &#39;name&#39; is private;</span></code></pre></div>
+
+<p><code>protacted</code>：继承类的实例可以调用，但无法外部调用。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Person</span> <span class="p">{</span>
+  <span class="kr">protected</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">Employee</span> <span class="kr">extends</span> <span class="nx">Person</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">department</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">department</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">department</span> <span class="o">=</span> <span class="nx">department</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">getElevatorPitch</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="err">`</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">my</span> <span class="nx">name</span> <span class="nx">is</span> <span class="nx">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span> <span class="nx">and</span> <span class="nx">I</span> <span class="nx">work</span> <span class="k">in</span> <span class="nx">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">department</span><span class="p">}.</span><span class="err">`</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">howard</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Employee</span><span class="p">(</span><span class="s1">&#39;Howard&#39;</span><span class="p">,</span> <span class="s1">&#39;Sales&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">howard</span><span class="p">.</span><span class="nx">getElevatorPitch</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">howard</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>   <span class="c1">// error</span></code></pre></div>
+
+<h3 id="section-6">只读属性</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Octopus</span> <span class="p">{</span>
+  <span class="nx">readonly</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">constructor</span> <span class="p">(</span><span class="nx">theName</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">theName</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="section-7">快速定义属性</h3>
+
+<p>给 constructor 的参数加上修饰符，省去属性定义。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">SomeClass</span> <span class="p">{</span>
+   <span class="nx">constructor</span><span class="p">(</span>
+     <span class="kr">private</span> <span class="nx">a</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+     <span class="nx">protacted</span> <span class="nx">b</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+     <span class="kr">public</span> <span class="nx">c</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+     <span class="nx">readonly</span> <span class="nx">d</span><span class="o">:</span> <span class="nx">string</span>
+   <span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="section-8">抽象类</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">abstract</span> <span class="kr">class</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="kr">abstract</span> <span class="nx">makeSound</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span><span class="p">;</span>
+  <span class="nx">move</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;roaming the earth...&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>抽象类中的抽象方法不需要具体实现，实现代码写在继承它的类里。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Cat</span> <span class="kr">extends</span> <span class="nx">Animal</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">public</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+  <span class="nx">makeSound</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;meow&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">move</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;cat is moving...&#39;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="section-9">函数</h2>
+
+<h3 id="section-10">函数类型</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span><span class="o">:</span> <span class="nx">number</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">myAdd</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span><span class="o">:</span> <span class="nx">number</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span> <span class="p">};</span></code></pre></div>
+
+<h3 id="section-11">可省略参数</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">buildName</span><span class="p">(</span><span class="nx">firstName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">lastName</span><span class="o">?:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">result1</span> <span class="o">=</span> <span class="nx">buildName</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">result3</span> <span class="o">=</span> <span class="nx">buildName</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Adams&#39;</span><span class="p">);</span> 
+<span class="kd">let</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">buildName</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Adams&#39;</span><span class="p">,</span> <span class="s1">&#39;Sr.&#39;</span><span class="p">);</span>  <span class="c1">// error, too many parameters</span></code></pre></div>
+
+<h3 id="section-12">默认参数</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">buildName</span><span class="p">(</span><span class="nx">firstName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="s1">&#39;Smith&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="rest-">Rest 参数</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">buildName</span><span class="p">(</span><span class="nx">firstName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="p">...</span><span class="nx">restOfName</span><span class="o">:</span> <span class="nx">string</span><span class="p">[])</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">firstName</span><span class="p">}</span> <span class="nx">$</span><span class="p">{</span><span class="nx">restOfName</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)}</span><span class="err">`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">employeeName</span> <span class="o">=</span> <span class="nx">buildName</span><span class="p">(</span><span class="s1">&#39;Joseph&#39;</span><span class="p">,</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span> <span class="s1">&#39;Lucas&#39;</span><span class="p">,</span> <span class="s1">&#39;MacKinzie&#39;</span><span class="p">);</span></code></pre></div>
+
+<h3 id="section-13">重载</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">pickCard</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">number</span><span class="p">[])</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">pickCard</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span><span class="o">:</span> <span class="nx">Card</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">pickCard</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="o">:</span> <span class="nx">any</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">==</span> <span class="s2">&quot;object&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">==</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>注意：以上代码中的 <code>function pickCard(x): any</code> 并不是重载的定义。</p>
+
+<h2 id="generics">Generics</h2>
+
+<p><code>T</code> 表示用户在调用时指定的类型。</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">identity</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">arg</span><span class="o">:</span> <span class="nx">T</span><span class="p">)</span><span class="o">:</span> <span class="nx">T</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">arg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">output</span> <span class="o">=</span> <span class="nx">identity</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">&#39;myString&#39;</span><span class="p">);</span></code></pre></div>
+
+<h3 id="generic-array">Generic Array</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">loggingIdentity</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">arg</span><span class="o">:</span> <span class="nx">T</span><span class="p">[])</span><span class="o">:</span> <span class="nx">T</span><span class="p">[]</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arg</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>  <span class="c1">// Array has a .length, so no more error</span>
+  <span class="k">return</span> <span class="nx">arg</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<h3 id="generic-classes">Generic Classes</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">GenericNumber</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="nx">zeroValue</span><span class="o">:</span> <span class="nx">T</span><span class="p">;</span>
+    <span class="nx">add</span><span class="o">:</span> <span class="p">(</span><span class="nx">x</span><span class="o">:</span> <span class="nx">T</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span> <span class="nx">T</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">T</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">myGenericNumber</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GenericNumber</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="nx">myGenericNumber</span><span class="p">.</span><span class="nx">zeroValue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="nx">myGenericNumber</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span> <span class="p">};</span></code></pre></div>
+
+<h3 id="section-14">限制范围</h3>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">interface</span> <span class="nx">Lengthwise</span> <span class="p">{</span>
+  <span class="nx">length</span><span class="o">:</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loggingIdentity</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">Lengthwise</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">arg</span><span class="o">:</span> <span class="nx">T</span><span class="p">)</span><span class="o">:</span> <span class="nx">T</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arg</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>  <span class="c1">// Now we know it has a .length property, so no more error</span>
+  <span class="k">return</span> <span class="nx">arg</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>指定泛型之间的依赖：</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">copyFields</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kr">extends</span> <span class="nx">U</span><span class="p">,</span> <span class="nx">U</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">target</span><span class="o">:</span> <span class="nx">T</span><span class="p">,</span> <span class="nx">source</span><span class="o">:</span> <span class="nx">U</span><span class="p">)</span><span class="o">:</span> <span class="nx">T</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="mi">4</span> <span class="p">};</span>
+
+<span class="nx">copyFields</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="p">{</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">d</span><span class="o">:</span> <span class="mi">20</span> <span class="p">});</span>
+<span class="nx">copyFields</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="p">{</span> <span class="nx">Q</span><span class="o">:</span> <span class="mi">90</span> <span class="p">});</span>   <span class="c1">// error: property &#39;Q&#39; isn&#39;t declared in &#39;x&#39;.</span></code></pre></div>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+	<section class="disqus">
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_shortname = 'ashnorseman';
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	</section>
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Until the Light takes us</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Posts</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:ashnorseman@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">ashnorseman@gmail.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/ashnorseman" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">ashnorseman</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <!--<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>-->
+      <p class="text">Burn to ashes. Drift like snow.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+  // Syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>
